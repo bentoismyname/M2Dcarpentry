@@ -104,10 +104,9 @@ const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
 const seg = (p, [a, b]) => clamp((p - a) / (b - a));
 const ease = (t) => t * t * (3 - 2 * t);
 const lerp = (a, b, t) => a + (b - a) * t;
+// The picture stays put while you scroll: one spot for the whole build (where it starts), no sliding sideways.
 function focalAt(p) {
-  const F = TOUR.focal;
-  for (let i = 1; i < F.length; i++) if (p <= F[i][0]) return lerp(F[i - 1][1], F[i][1], ease(seg(p, [F[i - 1][0], F[i][0]])));
-  return F[F.length - 1][1];
+  return TOUR.focal[0][1];
 }
 if (tour) TOUR.dots.forEach((list, i) => {
   dotBoxes[i].innerHTML = list.map((d) =>

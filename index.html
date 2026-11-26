@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
 <script>if(!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pre-on")</script>
-<link rel="stylesheet" href="style.css?v=120">
+<link rel="stylesheet" href="style.css?v=122">
 <script>(function(d){if(window.IntersectionObserver&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("rv-pre");setTimeout(function(){d.classList.remove("rv-pre")},2500)}})(document.documentElement)</script>
 </head>
 <body class="page-home">
@@ -21,8 +21,8 @@
 <!-- ───── Opening: the name, then a window onto the house that grows to fill the screen ───── -->
 <div class="pre" id="pre" aria-hidden="true">
   <div class="pre-win"></div>
-  <img class="pre-logo" src="assets/m2d-renovation-carpentry-side.svg" alt="" width="272" height="43">
-  <p class="pre-cap"></p>
+  <img class="pre-logo" src="assets/m2d-mark.svg" alt="" width="131" height="43">
+  <p class="pre-cap">Carpentry</p>
 </div>
 
 
@@ -143,15 +143,29 @@
         </article>
       </div>
 
-      <!-- Three big numbers on the brown band, counting up as they scroll into view (app.js, counters), as in the
-           "Why M2D" part of m2decor.com. The first two are M2D's own figures from that page; the third is our build time.
-           The finished numbers are written here, so they still read correctly if the counting never runs. -->
+    </div>
+  </section>
+
+  <!-- ───── Why M2D: a full-width brown section, as on the home page of m2decor.com. The heading and the paragraph are
+       M2D's own words from there. Below them three big numbers count up as they scroll into view (app.js, counters):
+       the first two are M2D's own figures, the third is our build time. The finished numbers are written here, so
+       they still read correctly if the counting never runs. ───── -->
+  <section class="block why" id="why">
+    <div class="wrap">
+      <p class="eyebrow">Why M2D</p>
+      <h2>Design centric.<br>Streamlined design &amp; build.<br>From the ground up.</h2>
+      <p class="lede">Our roots lie in the art of woodwork. That background gives us a deep appreciation for materials, structure and space, and a crew that builds what we draw.</p>
       <ul class="counts">
         <li><p class="count-n"><span data-count="35">35</span><sup>+</sup></p><p class="count-l">Years of craftsmanship</p></li>
         <li><p class="count-n"><span data-count="300">300</span><sup>+</sup></p><p class="count-l">Spaces renovated</p></li>
         <li><p class="count-n"><span data-count="4">4</span>–<span data-count="6">6</span></p><p class="count-l">Weeks, built to order</p></li>
       </ul>
+    </div>
+  </section>
 
+  <!-- ───── Quick price ───── -->
+  <section class="block" id="price">
+    <div class="wrap">
       <!-- Quick price: a small version of the price calculator that fits on one screen. Choices on the left,
            the live 3D preview on the right. The prices come from Ben's own price table (calc.js); app.js fills in
            the choices. The button carries the chosen piece over to the full calculator on the Carpentry page. -->
@@ -337,8 +351,8 @@
     <div class="wrap two">
       <div>
         <p class="eyebrow">FAQ</p>
-        <h2>Questions.</h2>
-        <p class="lede" style="margin-top:14px">Anything else, just ask us.</p>
+        <h2>Frequently asked<br>questions.</h2>
+        <p class="lede faq-lede">Not answered here? Drop us a message on WhatsApp and we will reply within the day.</p>
         <a class="btn" style="margin-top:28px" href="contact.html">Contact us</a>
       </div>
       <div class="faq">
@@ -427,6 +441,6 @@
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="app.js?v=120"></script>
+<script src="app.js?v=122"></script>
 </body>
 </html>
