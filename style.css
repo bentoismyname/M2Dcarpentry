@@ -2204,3 +2204,22 @@ section.about-press{padding:clamp(48px,6vw,90px) 0 clamp(40px,5vw,72px)}
   .chero--about{min-height:86svh}
   .chero--about .chero__bg img{object-position:46% 30%}
 }
+
+/* ───── Our story hero: nobody's face is cut off. The photo (1600 x 971) starts under the header and is pinned to its
+   top, so only floor and legs are ever cropped. Height: never more than the photo's own (no cropping at the sides),
+   and at least enough for the words to sit below the seated faces (faces end 42% down the photo). ───── */
+.chero--about{margin-top:76px;min-height:0;height:min(60.7vw,max(calc(100svh - 76px),calc(25.5vw + 350px)))}
+.chero--about .chero__bg img{object-position:center top}
+.chero--about .chero__bg::after{background:linear-gradient(180deg,rgba(20,17,16,0) 0,rgba(20,17,16,0) 40%,rgba(20,17,16,.6) 64%,rgba(20,17,16,.88) 100%)}
+.chero--about .chero__in{gap:14px;padding-top:0;padding-bottom:clamp(30px,3.4vw,54px)}
+.chero--about h1{font-size:clamp(34px,4.8vw,74px)}
+.chero--about .lede{max-width:620px}
+@media (max-width:999px){
+  .chero--about{display:block;height:auto;margin-top:64px;background:#1E1C1B}
+  .chero--about .chero__bg{position:relative;inset:auto}
+  .chero--about .chero__bg img{height:auto;aspect-ratio:1600 / 971;object-position:center}
+  .chero--about .chero__bg::after{display:none}
+  .chero--about .chero__in{padding-top:34px;padding-bottom:46px}
+  .chero--about h1,.chero--about .lede{text-shadow:none}
+}
+@media (max-width:820px){.chero--about{margin-top:60px;min-height:0}}
