@@ -1,0 +1,39 @@
+  <!-- ───── One home from the portfolio. Laid out as on m2decor.com: a big title with the words, then blocks of
+       words beside a mosaic of photos (the photos fly in from their own corners), then the homes before and after.
+       The words and photos are filled in by the page builder from _parts/projects.json. The words are M2D's own. ───── -->
+  <section class="proj-hero">
+    <div class="wrap">
+      <div class="proj-hero__top">
+        <div>
+          <p class="eyebrow proj-hero__eyebrow">Our Portfolio</p>
+          <h1>{{title}}</h1>
+          <p class="lede proj-hero__tag">{{lede}}</p>
+        </div>
+        <div class="meta">{{place}}<br>({{kind}})</div>
+      </div>
+    </div>
+    <div class="proj-hero__coverwrap"><div class="proj-cover"><img src="{{cover}}" alt="{{title}}"></div></div>
+  </section>
+
+  <div class="cl-wrap">
+    <section class="wrap cl" id="story">
+{{blocks}}
+    </section>
+  </div>
+
+  <section class="wrap">
+    <div class="proj-nav">
+      <a href="{{prev_href}}"><span>Previous</span><b>{{prev_title}}</b></a>
+      <a href="{{next_href}}"><span>Next</span><b>{{next_title}}</b></a>
+    </div>
+  </section>
+
+  <section class="tband">
+    <div class="wrap tband-in">
+      <div>
+        <h2>Carpentry for your home.</h2>
+        <p>Wardrobes, kitchens, feature walls and doors, priced by size and finish.</p>
+      </div>
+      <a class="btn light" href="carpentry.html#calc">Price your carpentry</a>
+    </div>
+  </section>

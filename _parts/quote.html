@@ -1,0 +1,34 @@
+  <!-- ───── Request a quote ───── -->
+  <section class="block alt" id="quote">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Quote</p>
+        <h2>Request an exact quote.</h2>
+        <p class="lede" style="margin-top:14px">We usually reply within one working day.</p>
+        <ol class="qsteps">
+          <li><b>1</b><div><strong>Tell us about the space</strong><span>Photos, a floor plan or rough measurements are enough to start.</span></div></li>
+          <li><b>2</b><div><strong>Site measure and drawing</strong><span>We measure on site and send shop drawings with materials and a fixed quote.</span></div></li>
+          <li><b>3</b><div><strong>Fabrication and install</strong><span>Built in our workshop and installed by the people who built it.</span></div></li>
+        </ol>
+      </div>
+      <form class="qform ctile" id="quoteForm" novalidate>
+        <h3>Your details</h3>
+        <div id="qEst" class="q-est" hidden></div>
+        <fieldset><legend>What do you need?</legend><div class="chipset" id="needSeg"></div></fieldset>
+        <fieldset><legend>Property type</legend><div class="chipset" id="propSeg"></div></fieldset>
+        <div class="qrow">
+          <div class="field"><label for="bW">Width (mm)</label><input type="text" id="bW" inputmode="numeric"></div>
+          <div class="field"><label for="bH">Height (mm)</label><input type="text" id="bH" inputmode="numeric"></div>
+        </div>
+        <div class="field"><label for="bNotes">Anything to add? (optional)</label><textarea id="bNotes" rows="3"></textarea></div>
+        <div class="qrow">
+          <div class="field"><label for="bName">Name</label><input type="text" id="bName" autocomplete="name"></div>
+          <div class="field"><label for="bPhone">Mobile</label><input type="tel" id="bPhone" autocomplete="tel" inputmode="tel"></div>
+        </div>
+        <p class="est-err" id="qErr" role="alert"></p>
+        <button class="btn block" type="submit">Send my quote request</button>
+        <p class="form-note">This opens WhatsApp with your request written out. Attach any photos or drawings in the same chat. We reply within one working day.</p>
+      </form>
+    </div>
+  </section>
+

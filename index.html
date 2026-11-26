@@ -1,0 +1,419 @@
+<!doctype html>
+<!-- Built by build-carpentry-pages.py from the files in _parts/. Edit those, then run the script again. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>M2D Carpentry | Furniture and carpentry made in Singapore</title>
+<meta name="description" content="M2D Carpentry is a second-generation Singaporean carpentry workshop. Ready-designed furniture and bespoke carpentry, built to order by our own team.">
+<meta name="theme-color" content="#F6F2EA">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=3">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<script>if(!location.hash&&!matchMedia("(prefers-reduced-motion: reduce)").matches)document.documentElement.classList.add("pre-on")</script>
+<link rel="stylesheet" href="style.css?v=111">
+<script>(function(d){if(window.IntersectionObserver&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("rv-pre");setTimeout(function(){d.classList.remove("rv-pre")},2500)}})(document.documentElement)</script>
+</head>
+<body class="page-home">
+
+<!-- ───── Opening: the name, then a window onto the house that grows to fill the screen ───── -->
+<div class="pre" id="pre" aria-hidden="true">
+  <div class="pre-win"></div>
+  <img class="pre-logo" src="assets/m2d-brown.png" alt="" width="1028" height="338">
+  <p class="pre-cap">Carpentry</p>
+</div>
+
+
+<header class="top" id="top">
+  <a class="brand" href="index.html" aria-label="M2D Carpentry, home">
+    <img src="assets/m2d-brown.png" alt="M2D" width="1028" height="338">
+    <span>Carpentry</span>
+  </a>
+  <nav class="top-nav nav-all" aria-label="Pages">
+    <a href="index.html" data-page="home" class="on" aria-current="page">Home</a>
+    <a href="shop.html" data-page="shop">Shop</a>
+    <a href="carpentry.html" data-page="carpentry">Carpentry</a>
+    <a href="about.html" data-page="about">Our story</a>
+    <a href="portfolio.html" data-page="portfolio">Portfolio</a>
+    <a href="blog.html" data-page="blog">Blog</a>
+    <a href="contact.html" data-page="contact">Contact us</a>
+  </nav>
+  <div class="top-right">
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="Open your cart">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <b id="cartCount" hidden>0</b>
+    </button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="topNav"><span></span><span></span></button>
+  </div>
+  <nav class="top-drop" id="topNav" aria-label="Menu">
+    <a href="index.html" data-page="home" class="on" aria-current="page">Home</a>
+    <a href="shop.html" data-page="shop">Shop</a>
+    <a href="carpentry.html" data-page="carpentry">Carpentry</a>
+    <a href="about.html" data-page="about">Our story</a>
+    <a href="portfolio.html" data-page="portfolio">Portfolio</a>
+    <a href="blog.html" data-page="blog">Blog</a>
+    <a href="contact.html" data-page="contact">Contact us</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ───── Home hero: scroll to build the room ───── -->
+  <section class="tour" id="tour" aria-label="An empty room being fitted out by M2D Carpentry">
+    <div class="stage">
+      <canvas class="tour-canvas" aria-hidden="true"></canvas>
+      <div class="plate">
+        <div class="dots" data-dots="0"></div>
+        <div class="dots off" data-dots="1"></div>
+      </div>
+      <!-- Three headers about M2D and the team, one for each stage of the build:
+           the kitchen going in, the sofa and table arriving, and the chairs arriving (this last one stays).
+           One shows at a time and each fades in. The words and facts are M2D's own, from m2decor.com/about. -->
+      <div class="tour-heads">
+        <div class="tour-head on">
+          <h2>One team, <em>two generations.</em></h2>
+          <p>M2D's story begins at a carpentry bench, in 2001.</p>
+        </div>
+        <div class="tour-head">
+          <h2>Built by <em>our own crew.</em></h2>
+          <p>Our carpentry is fabricated in our own workshop and installed by our own crew.</p>
+        </div>
+        <div class="tour-head">
+          <h2>The people <em>behind the work.</em></h2>
+          <p>A creative team and a core crew, trusted by over 200 households.</p>
+          <a class="btn" href="about.html#people">Meet the team</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── A few pieces from the shop, straight after the hero ───── -->
+  <section class="block shop" id="featured">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Shop</p>
+          <h2>The furniture.</h2>
+        </div>
+        <div>
+          <a class="btn" href="shop.html">See all the pieces</a>
+        </div>
+      </div>
+      <div class="pgrid" id="featGrid"></div>
+    </div>
+  </section>
+
+  <!-- ───── Who we are: straight after the furniture. The heading, then three numbered photos of our own crew
+       with a few words each. The words are Ben's own, from his M2D Carpentry page: building everything in-house,
+       in Singapore, is the main selling point. ───── -->
+  <section class="block intro" id="intro">
+    <div class="wrap">
+      <!-- "rp" marks things that play their entrance again each time they come back into view -->
+      <p class="eyebrow rp">Why M2D Carpentry</p>
+      <!-- the first line eases in from the left and the second from the right, both fading in -->
+      <h1 class="intro-h"><span class="ih-a">Furniture made in Singapore,</span> <em>by people you can meet.</em></h1>
+      <!-- 01, 02, 03: a photo with a thin outline set off behind it and an outlined number at its corner; the rows swap sides -->
+      <div class="tm" id="team3">
+        <article class="tm-row">
+          <div class="tm-text">
+            <h3>Made in Singapore</h3>
+            <p>A second-generation Singaporean workshop that builds everything in-house. Because we make every piece ourselves, we can give you better costing and control the quality from start to finish.</p>
+          </div>
+          <figure class="tm-pic"><span class="tm-no" aria-hidden="true">01</span><span class="tm-frame" aria-hidden="true"></span>
+            <span class="tm-img"><img src="assets/about/workshop.jpg" alt="One of our carpenters at the workshop bench" loading="lazy" width="1600" height="1155"></span></figure>
+        </article>
+        <article class="tm-row flip">
+          <div class="tm-text">
+            <h3>Built by our own team</h3>
+            <p>Every piece is cut, edged, assembled and finished by our own team. It is built in our workshop and installed by the people who built it.</p>
+          </div>
+          <figure class="tm-pic"><span class="tm-no" aria-hidden="true">02</span><span class="tm-frame" aria-hidden="true"></span>
+            <span class="tm-img"><img src="assets/crew/2e76a775.jpg" alt="Our carpenters fitting a kitchen" loading="lazy" width="1100" height="619"></span></figure>
+        </article>
+        <article class="tm-row">
+          <div class="tm-text">
+            <h3>People you can meet</h3>
+            <p>Come by, see work in progress, feel the finishes and talk through a piece with the carpenter who'll make it. The same people build the cabinetry for M2D Interior Design projects, so the standard you see in our homes is the one in every piece we sell.</p>
+            <a class="btn ghost" href="about.html#people">Meet the team</a>
+          </div>
+          <figure class="tm-pic"><span class="tm-no" aria-hidden="true">03</span><span class="tm-frame" aria-hidden="true"></span>
+            <span class="tm-img"><img src="assets/about/team.jpg" alt="The M2D team together at the workshop" loading="lazy" width="1600" height="971"></span></figure>
+        </article>
+      </div>
+
+      <ul class="stats">
+        <li><small>Made in</small><strong>Singapore</strong><span>Second-generation workshop</span></li>
+        <li><small>Built to order</small><strong>4–6 weeks</strong><span>For most pieces</span></li>
+        <li><small>Installed by</small><strong>Our own team</strong><span>The people who built it</span></li>
+      </ul>
+
+      <!-- Quick price: a small version of the price calculator that fits on one screen. Choices on the left,
+           the live 3D preview on the right. The prices come from Ben's own price table (calc.js); app.js fills in
+           the choices. The button carries the chosen piece over to the full calculator on the Carpentry page. -->
+      <div class="qc" id="quick">
+        <div class="qc-side">
+          <p class="eyebrow">Price estimate</p>
+          <h2>Price your <em>carpentry.</em></h2>
+          <div class="qc-row"><span class="qc-l">Piece</span><div class="qc-chips" id="qcItems"></div></div>
+          <div class="qc-row"><span class="qc-l">Width</span><div class="qc-chips" id="qcWidths"></div></div>
+          <div class="qc-row"><span class="qc-l">Colour</span><div class="qc-sw" id="qcCols"></div></div>
+          <div class="qc-out" aria-live="polite"><small>Estimated price</small><strong id="qcPrice">&nbsp;</strong><span id="qcSub">&nbsp;</span></div>
+          <a class="btn" id="qcMore" href="carpentry.html#calc">Try the full calculator</a>
+          <p class="qc-note">An estimate before GST. Your final price is confirmed after we measure on site.</p>
+        </div>
+        <div class="qc-view">
+          <canvas id="qcCanvas" width="960" height="720" role="img" aria-label="Preview of the piece. Drag to rotate."></canvas>
+          <span class="qc-tag l" id="qcSize"></span><span class="qc-tag r">Drag to rotate</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Behind the scenes: words on the left; on the right the crew photos ride a ferris wheel upwards.
+       The photo passing the middle is the big one. ───── -->
+  <section class="crew" id="crew" aria-label="Our own crew at work">
+    <div class="wrap crew-in">
+      <div class="crew-head">
+        <p class="eyebrow">Behind the scenes</p>
+        <h2>Our own crew, <em>on the job.</em></h2>
+        <p class="crew-lede">We do not believe in a showroom. Our carpentry is fabricated in our own workshop and installed by our own crew.</p>
+      </div>
+      <div class="wheel" id="crewWheel">
+        <span class="wh-frame" aria-hidden="true"></span>
+        <figure class="wh-card"><img src="assets/workers/01.jpg" alt="Cutting a panel on the workshop saw" width="1200" height="675"></figure>
+        <figure class="wh-card"><img src="assets/workers/02.jpg" alt="Two of the crew fitting a wall panel" width="675" height="900"></figure>
+        <figure class="wh-card"><img src="assets/workers/03.jpg" alt="Three of the crew fitting kitchen cabinets" width="675" height="900"></figure>
+        <figure class="wh-card"><img src="assets/workers/04.jpg" alt="At the workshop bench" width="675" height="900"></figure>
+        <figure class="wh-card"><img src="assets/workers/05.jpg" alt="Fixing the top of a tall cabinet from a ladder" width="675" height="900"></figure>
+        <figure class="wh-card"><img src="assets/workers/06.jpg" alt="Unloading cabinets from the lorry" width="675" height="900"></figure>
+        <figure class="wh-card"><img src="assets/workers/07.jpg" alt="Assembling a cabinet" width="1200" height="675" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/08.jpg" alt="Finishing a ceiling" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/09.jpg" alt="Assembling a unit on site" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/10.jpg" alt="Unloading boards from the lorry" width="1200" height="675" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/11.jpg" alt="Fitting a ceiling light" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/12.jpg" alt="Measuring a door frame" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/13.jpg" alt="Measuring up with a tape" width="1200" height="675" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/14.jpg" alt="Hacking a floor" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/15.jpg" alt="Fitting shelving on site" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/16.jpg" alt="Working at the ceiling from a ladder" width="1200" height="675" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/17.jpg" alt="Measuring a wall" width="675" height="900" loading="lazy"></figure>
+        <figure class="wh-card"><img src="assets/workers/18.jpg" alt="Finishing a wall by the window" width="675" height="900" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ───── The process: a photo of the crew stays put on the left while the four steps scroll past on the right;
+       the photo changes with the step. The steps are our own carpentry process, in Ben's words from his page.
+       On a phone each step simply has its photo above it. ───── -->
+  <section class="block alt proc" id="process">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">The process</p>
+          <h2>From conception <em>to execution.</em></h2>
+        </div>
+        <p class="lede">Tell us the size and the carpenter who will build it will draw it up.</p>
+      </div>
+      <div class="process">
+        <div class="process-media" aria-hidden="true">
+          <img class="on" src="assets/workers/17.jpg" alt="" width="675" height="900" loading="lazy">
+          <img src="assets/workers/12.jpg" alt="" width="675" height="900" loading="lazy">
+          <img src="assets/workers/04.jpg" alt="" width="675" height="900" loading="lazy">
+          <img src="assets/workers/03.jpg" alt="" width="675" height="900" loading="lazy">
+        </div>
+        <div class="psteps">
+          <div class="pstep on">
+            <img class="pstep-pic" src="assets/workers/17.jpg" alt="Our crew looking over a wall on site with the homeowner" width="675" height="900" loading="lazy">
+            <span class="n">01</span><h3>Tell us about the space</h3>
+            <p>Photos, a floor plan or rough measurements are enough to start.</p>
+          </div>
+          <div class="pstep">
+            <img class="pstep-pic" src="assets/workers/12.jpg" alt="Measuring a door frame on site" width="675" height="900" loading="lazy">
+            <span class="n">02</span><h3>Site measure and drawing</h3>
+            <p>We measure on site and send shop drawings with materials and a fixed quote.</p>
+          </div>
+          <div class="pstep">
+            <img class="pstep-pic" src="assets/workers/04.jpg" alt="One of our carpenters at the workshop bench" width="675" height="900" loading="lazy">
+            <span class="n">03</span><h3>Fabrication</h3>
+            <p>Every piece is cut, edged, assembled and finished by our own team, in our own workshop. Bespoke carpentry is usually 3–5 weeks of fabrication once the drawing is approved.</p>
+          </div>
+          <div class="pstep">
+            <img class="pstep-pic" src="assets/workers/03.jpg" alt="Three of the crew fitting kitchen cabinets" width="675" height="900" loading="lazy">
+            <span class="n">04</span><h3>Installation</h3>
+            <p>Installed by the people who built it. Carpentry and furniture carry a one-year workmanship warranty covering hinges, runners and joinery.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── M2D's four divisions, as on m2decor.com/services. Pointing at a panel shows its second photo, a wash of
+       that division's own colour, and a few words. The words, colours and photos are M2D's own.
+       Interior Design opens m2decor.com, the Workshop opens benjamintoh.com, and Carpentry is this site. ───── -->
+  <section class="block divs" id="divisions">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Part of M2D</p>
+          <h2>Four divisions, <em>one roof.</em></h2>
+        </div>
+        <p class="lede">Design, renovation and carpentry by our own crew, a workshop that builds what the design needs, and a handyman team that stays after the handover.</p>
+      </div>
+    </div>
+    <div class="svc-grid" id="svcGrid">
+      <a class="svc" href="https://www.m2decor.com/" target="_blank" rel="noopener" style="--c:#E37F32">
+        <img class="svc__img" src="assets/portfolio/strathmore/01.jpg" alt="Interior Design and Consultancy" loading="lazy">
+        <img class="svc__img svc__img--hover" src="assets/portfolio/japandi/07.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><img src="assets/m2d-brown.png" alt="M2D"><span>Interior Design<br>and Consultancy</span></span>
+        <span class="svc__text">Space planning, concept boards, 3D visualisation and material selection, designed around how you actually live: the morning routine, the hosting, the quiet evenings.</span>
+        <span class="svc__more">Visit m2decor.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Interior Design</span><span>&amp; Consultancy</span></span>
+      </a>
+      <a class="svc" href="carpentry.html" style="--c:#6B4A14">
+        <img class="svc__img" src="assets/divisions/reno-carpenter.jpg" alt="Renovation and Carpentry" loading="lazy">
+        <img class="svc__img svc__img--hover" src="assets/divisions/09.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><img src="assets/m2d-brown.png" alt="M2D"><span>Renovation<br>and Carpentry</span></span>
+        <span class="svc__text">Turnkey renovation with our own crew: M&amp;E, ceiling, masonry, tiling, painting and carpentry fabricated in our workshop and installed by the people who built it.</span>
+        <span class="svc__more">Our carpentry <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Renovation</span><span>&amp; Carpentry</span></span>
+      </a>
+      <div class="svc" tabindex="0" style="--c:#1F4A3C">
+        <img class="svc__img" src="assets/divisions/handyman-ladder.jpg" alt="Handyman and Home Repair" loading="lazy">
+        <img class="svc__img svc__img--hover" src="assets/divisions/handyman-plaster.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><img src="assets/m2d-brown.png" alt="M2D"><span>Handyman<br>and Home Repair</span></span>
+        <span class="svc__text">After the handover, we stay. Touch-ups, repairs, re-fits and small works for homes we built and homes we did not.</span>
+        <span class="svc__name"><span>Handyman</span><span>&amp; Home Repair</span></span>
+      </div>
+      <a class="svc" href="https://www.benjamintoh.com/" target="_blank" rel="noopener" style="--c:#B3422D">
+        <img class="svc__img" src="assets/divisions/workshop-ben2.jpg" alt="Interior Design Workshop" loading="lazy">
+        <img class="svc__img svc__img--hover" src="assets/divisions/workshop-teach.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><img src="assets/m2d-brown.png" alt="M2D"><span>Interior Design<br>Workshop</span></span>
+        <span class="svc__text">Bespoke built-ins, feature walls and furniture made to drawing. Where a design needs a piece that does not exist yet, the workshop makes it.</span>
+        <span class="svc__more">Visit benjamintoh.com <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Interior Design</span><span>Workshop</span></span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ───── Reviews: heading and scores on the left, two columns of review cards drifting past on the right.
+       The cards are real reviews from M2D clients, as used on Ben's own pages.
+       With the pointer over the cards the drift stops and the wheel scrolls them (app.js, reviewsWheel). ───── -->
+  <section class="block rvw" id="reviews">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="gG" viewBox="0 0 48 48"><path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5z"/><path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.94c-.58 2.96-2.26 5.48-4.78 7.18l7.73 6c4.51-4.18 7.09-10.36 7.09-17.65z"/><path fill="#FBBC05" d="M10.53 28.59c-.48-1.45-.76-2.99-.76-4.59s.27-3.14.76-4.59l-7.98-6.19C.92 16.46 0 20.12 0 24c0 3.88.92 7.54 2.56 10.78l7.97-6.19z"/><path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.89-5.81l-7.73-6c-2.15 1.45-4.92 2.3-8.16 2.3-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48z"/></symbol></svg>
+    <div class="wrap rvw-in">
+      <div class="rvw-left">
+        <p class="eyebrow">Reviews</p>
+        <h2>What homeowners say.</h2>
+        <p class="lede">Our carpentry goes into every M2D home. These are 201 reviews from M2D clients across three platforms.</p>
+        <div class="rvw-score">
+          <p class="rvw-num"><b>4.8</b><span class="rc-stars" role="img" aria-label="4.8 out of 5 stars">★★★★★</span></p>
+          <p class="rvw-on"><svg viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg><span><b>Rated on Google</b>From 117 reviews of M2D</span></p>
+        </div>
+        <ul class="rvw-more">
+          <li><a href="https://www.hometrust.sg/interior-designers/m2-decor-pte-ltd#reviews" target="_blank" rel="noopener" aria-label="M2D's reviews on Hometrust"><img src="assets/reviews/hometrust.png" alt="Hometrust" width="653" height="99" loading="lazy"></a><p><b>9.5 / 10</b>From 63 homeowners</p></li>
+          <li><a href="https://qanvast.com/sg/interior-designers-architects/m2-decor-2469#reviews" target="_blank" rel="noopener" aria-label="M2D's reviews on Qanvast"><img class="q" src="assets/reviews/qanvast.svg" alt="Qanvast" width="1024" height="225" loading="lazy"></a><p><b>4.9 / 5</b>Across 21 reviews</p></li>
+        </ul>
+        <a class="btn ghost" href="https://www.google.com/maps/place/M2+Decor+Pte+Ltd/@1.454737,103.7983522,17z/data=!4m8!3m7!1s0x31da139a0f66d853:0xc810eab93ec98c2e!8m2!3d1.454737!4d103.7983522!9m1!1b1!16s%2Fg%2F11g0kfmnjb" target="_blank" rel="noopener">Read all on Google</a>
+      </div>
+      <div class="rvw-cols" id="rvwCols">
+        <div class="rvw-col"><ul class="rvw-track"><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">C</span><p class="rc-who"><b>Colin Koh</b><span>Homeowner · Google</span></p><svg class="rc-g" viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg></div><p class="rc-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p><blockquote>Ben’s team stepped in immediately, redid the ABS laminate work, and managed to fix the issue with the frame.</blockquote><p class="rc-src"><svg class="rc-g" viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg>Google review</p></li><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">T</span><p class="rc-who"><b>Terry</b><span>Homeowner · Hometrust</span></p><img class="rc-g" src="assets/reviews/hometrust-icon.png" alt="" width="96" height="96" loading="lazy"></div><blockquote>Benjamin was the only one who assured me he could meet the deadline, and he kept his word. The quality of the workmanship was impressive, and the house feels like a dream.</blockquote><p class="rc-src"><img class="rc-g" src="assets/reviews/hometrust-icon.png" alt="" width="96" height="96" loading="lazy">Hometrust review</p></li><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">M</span><p class="rc-who"><b>Mervyn Lim</b><span>Homeowner · Google</span></p><svg class="rc-g" viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg></div><p class="rc-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p><blockquote>The workmanship was excellent, and the final result exceeded our expectations.</blockquote><p class="rc-src"><svg class="rc-g" viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg>Google review</p></li><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">M</span><p class="rc-who"><b>Michelle &amp; Stephen</b><span>Homeowner</span></p></div><blockquote>Benjamin is a true problem solver. When unexpected issues arose during the renovation, he worked tirelessly to find a solution that worked for everyone.</blockquote><p class="rc-src">M2D homeowners</p></li></ul></div>
+        <div class="rvw-col b"><ul class="rvw-track"><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">V</span><p class="rc-who"><b>Vikram Vijayakumar</b><span>Homeowner · Google</span></p><svg class="rc-g" viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg></div><p class="rc-stars" role="img" aria-label="5 out of 5 stars">★★★★★</p><blockquote>He took less than 2 months to finish our project, and still showed great attention to detail and fine workmanship.</blockquote><p class="rc-src"><svg class="rc-g" viewBox="0 0 48 48" aria-hidden="true"><use href="#gG"/></svg>Google review</p></li><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">H</span><p class="rc-who"><b>Hendra</b><span>Homeowner · Hometrust</span></p><img class="rc-g" src="assets/reviews/hometrust-icon.png" alt="" width="96" height="96" loading="lazy"></div><blockquote>In just 2.5 months my place went from ‘meh’ to ‘wow’. Ben really took the time to understand my needs and came up with clever solutions for everything, from tricky layouts to storage heater issues.</blockquote><p class="rc-src"><img class="rc-g" src="assets/reviews/hometrust-icon.png" alt="" width="96" height="96" loading="lazy">Hometrust review · 9/10</p></li><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">N</span><p class="rc-who"><b>Nor Amirah &amp; Fazlan</b><span>Homeowner</span></p></div><blockquote>Throughout the entire process, pre-reno to post-reno, Ben always kept us updated and attended to our enquiries immediately. It’s as if he works 24/7.</blockquote><p class="rc-src">M2D homeowners</p></li><li class="rc"><div class="rc-head"><span class="rc-av" aria-hidden="true">D</span><p class="rc-who"><b>Dorothy</b><span>Homeowner · Hometrust</span></p><img class="rc-g" src="assets/reviews/hometrust-icon.png" alt="" width="96" height="96" loading="lazy"></div><blockquote>Ben stood out from the rest in his ability to pull together my fragmented concepts, and patiently guided my understanding on why certain ideas may not work. He brings practicality into innovative designs.</blockquote><p class="rc-src"><img class="rc-g" src="assets/reviews/hometrust-icon.png" alt="" width="96" height="96" loading="lazy">Hometrust review · 10/10</p></li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── FAQ ───── -->
+  <section class="block alt" id="faq">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">FAQ</p>
+        <h2>Questions.</h2>
+        <p class="lede" style="margin-top:14px">Anything else, just ask us.</p>
+        <a class="btn" style="margin-top:28px" href="contact.html">Contact us</a>
+      </div>
+      <div class="faq">
+        <details><summary>Do you make doors?</summary><p>Yes. We make solid core laminated doors and door frames, flush doors with concealed frames, and sliding doors, all built to your opening and finished to match your carpentry. Send us the opening size and we'll quote after we measure on site.</p></details>
+        <details><summary>How long does a made-to-order piece take?</summary><p>Most furniture is ready in 4–6 weeks from your order. Bespoke carpentry is scheduled after the drawing is approved, usually 3–5 weeks of fabrication before installation.</p></details>
+        <details><summary>Can I change the size of a piece in the shop?</summary><p>Yes. Every piece has an "Ask about a size" link. Small changes are often the same price; we'll confirm before you pay.</p></details>
+        <details><summary>Is delivery included?</summary><p>Delivery and placement are free within mainland Singapore for orders above $1,500. Wall-mounted pieces include installation.</p></details>
+        <details><summary>Do you work with my own interior designer?</summary><p>Yes. We fabricate to drawings from homeowners, designers and contractors. Send us your shop drawings for a quote.</p></details>
+        <details><summary>What warranty comes with the work?</summary><p>Carpentry and furniture carry a one-year workmanship warranty covering hinges, runners and joinery.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Latest articles: the last section on Home. Three of M2D's newest articles; the page builder fills
+       them in from _parts/posts.json. Each card opens the article on M2D's website. ───── -->
+  <section class="block" id="articles">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Journal</p>
+          <h2>Latest <em>articles.</em></h2>
+        </div>
+        <a class="btn ghost" href="blog.html">See all articles</a>
+      </div>
+      <div class="arts">
+        <a class="art" href="https://www.m2decor.com/blog/form-function-and-flow-comparing-japandi-and-scandinavian-design" target="_blank" rel="noopener"><span class="art-pic"><img src="assets/blog/1.jpg" alt="" loading="lazy" width="1400" height="875"></span><span class="art-meta"><span>28 Jul 2026</span><span>11 min read</span></span><strong>Japandi vs Scandinavian Design: Form, Function, and Flow</strong><span class="art-ex">Discover the differences between Japandi and Scandinavian design and explore how both styles create intentional living spaces through form, function, and flow.</span></a>
+        <a class="art" href="https://www.m2decor.com/blog/what-is-contemporary-interior-design-key-features-and-how-it-differs-from-modern-design" target="_blank" rel="noopener"><span class="art-pic"><img src="assets/blog/2.jpg" alt="" loading="lazy" width="1400" height="875"></span><span class="art-meta"><span>28 Jul 2026</span><span>11 min read</span></span><strong>A Guide on the Key Features of Contemporary Interior Design</strong><span class="art-ex">Explore contemporary interior design and understand the key difference between modern and contemporary design in style, materials, and overall aesthetic.</span></a>
+        <a class="art" href="https://www.m2decor.com/blog/blending-wabi-sabi-and-japandi-interiors-can-you-have-the-best-of-both-worlds" target="_blank" rel="noopener"><span class="art-pic"><img src="assets/blog/3.jpg" alt="" loading="lazy" width="1400" height="875"></span><span class="art-meta"><span>27 Jul 2026</span><span>4 min read</span></span><strong>How to Blend Both Wabi-Sabi and Japandi Interior Styles</strong><span class="art-ex">Wabi-sabi and Japandi interiors are similar in philosophy, but different in approach. Learn how you can combine the best of both to create a refined sanctuary.</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand"><img src="assets/m2d-brown.png" alt="M2D" width="1028" height="338"><span>Carpentry</span></div>
+      <p>Furniture and bespoke carpentry, made in Singapore by a second-generation workshop. Part of M2D.</p>
+      <!-- M2D Carpentry's own Instagram and Facebook, as round buttons like the ones on m2decor.com -->
+      <div class="socials"><a href="https://www.instagram.com/m2dcarpentry/" target="_blank" rel="noopener" aria-label="M2D Carpentry on Instagram"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a><a href="https://www.facebook.com/p/M2DCarpentry-100095368721264/" target="_blank" rel="noopener" aria-label="M2D Carpentry on Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8h3.3z"/></svg></a></div>
+    </div>
+    <nav aria-label="Shop"><h4>Shop</h4><a href="shop.html">All furniture</a><a href="shop.html#custom">Made to size</a></nav>
+    <nav aria-label="Carpentry"><h4>Carpentry</h4><a href="carpentry.html">Bespoke carpentry</a><a href="carpentry.html#doors">Doors</a><a href="carpentry.html#estimate">Price estimate</a><a href="carpentry.html#quote">Request a quote</a><a href="portfolio.html">Portfolio</a><a href="carpentry.html#tenders">Tenders and commercial</a></nav>
+    <nav aria-label="About and contact"><h4>About and contact</h4><a href="about.html">Our story</a><a href="about.html#people">Our team</a><a href="blog.html">Blog</a><a href="contact.html">Contact us</a><a href="index.html#reviews">Reviews</a><a href="index.html#faq">FAQ</a><a href="https://www.m2decor.com" target="_blank" rel="noopener">M2D Interior Design</a><a href="https://wa.me/6598221113" target="_blank" rel="noopener">WhatsApp +65 9822 1113</a></nav>
+  </div>
+  <div class="wrap"><p class="fine">© 2026 M2 Decor Pte Ltd. UEN 201832713G.</p></div>
+  <!-- the word runs the full width of the footer; app.js sizes it to fit exactly -->
+  <p class="foot-big" aria-hidden="true"><span>Carpentry</span></p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6598221113" target="_blank" rel="noopener" aria-label="WhatsApp us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- ───── Piece card and cart: a side panel on wide screens, a sheet from the bottom on phones ───── -->
+<div class="card-back" id="cardBack" hidden></div>
+<aside class="card" id="card" role="dialog" aria-modal="true" aria-labelledby="cardName" hidden>
+  <button class="card-x" id="cardX" type="button" aria-label="Close">×</button>
+  <div class="card-imgs" id="cardImgs"></div>
+  <div class="card-body">
+    <p class="eyebrow" id="cardRoom"></p>
+    <h3 id="cardName"></h3>
+    <p class="card-price" id="cardPrice"></p>
+    <p class="card-desc" id="cardDesc"></p>
+    <dl class="card-facts" id="cardFacts"></dl>
+    <div class="card-buy" id="cardBuy"></div>
+    <a class="btn block" id="cardBtn" href="#"></a>
+    <a class="card-alt" id="cardAlt" href="#" target="_blank" rel="noopener"></a>
+  </div>
+</aside>
+<aside class="card cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <button class="card-x" id="cartX" type="button" aria-label="Close">×</button>
+  <div class="card-body">
+    <p class="eyebrow">Your cart</p>
+    <h3 id="cartTitle">Your pieces.</h3>
+    <div id="cartLines"></div>
+    <div id="cartFoot"></div>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js?v=111"></script>
+</body>
+</html>

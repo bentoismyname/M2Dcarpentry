@@ -1,0 +1,118 @@
+  <!-- ───── Top of the page: a film of a team fitting out a living room plays once in the background and stops on the
+       finished room (app.js, buildFilm). It does not loop. Where films cannot play, the finished room is shown as a picture.
+       The room and the people in the film are generated pictures, not one of M2D's own projects. ───── -->
+  <section class="chero chero--video" id="cph">
+    <div class="chero__bg"><img src="assets/carpentry-hero/start.jpg" alt="" width="1920" height="1080"></div>
+    <div class="wrap chero__in">
+      <p class="eyebrow">Bespoke carpentry</p>
+      <h1>Built into<br>your home.</h1>
+      <p class="lede">Drawn for your home and built by our own team: cabinetry, walls, storage and doors, made to your size and laminate.</p>
+      <a class="btn" href="carpentry.html#estimate">Estimate a price</a>
+    </div>
+  </section>
+
+  <!-- ───── Bespoke carpentry and doors ───── -->
+  <section class="block alt" id="bespoke">
+    <div class="wrap">
+      <div class="bgrid" id="bespokeGrid"></div>
+
+      <div class="sec-head doors-head" id="doors">
+        <div>
+          <p class="eyebrow">Doors</p>
+          <h2>Flush and sliding doors, <em>made to fit.</em></h2>
+        </div>
+        <p class="lede">We make the doors too: solid core laminated doors and their frames, built to the opening on site and finished to match your carpentry.</p>
+      </div>
+      <div class="dgrid">
+        <article class="ctile door"><div class="dimg" style="background-image:url(assets/doors/flush.jpg)"></div>
+          <h3>Flush doors, concealed frame</h3><p>A flat door face with the frame hidden, so the door sits in line with the wall and the joins almost disappear. For bedrooms, studies and storerooms you want to blend in.</p>
+          <a href="carpentry.html#quote" data-door="Flush door, concealed frame">Ask about flush doors</a></article>
+        <article class="ctile door"><div class="dimg" style="background-image:url(assets/doors/sliding.jpg)"></div>
+          <h3>Sliding doors</h3><p>Doors that run on a track instead of swinging out, to save floor space. Slim frames with mirror, glass or panel inserts.</p>
+          <a href="carpentry.html#quote" data-door="Sliding door">Ask about sliding doors</a></article>
+        <article class="ctile door plain">
+          <h3>Solid core laminated doors</h3><p>A solid core door is heavier and quieter than a hollow one, and it holds its shape. We laminate both faces in the finish you choose, so it matches your wardrobes and walls.</p>
+          <a href="carpentry.html#quote" data-door="Solid core laminated door">Ask about solid core doors</a></article>
+        <article class="ctile door plain">
+          <h3>Door frames</h3><p>We make the frames as well, so the door, frame and finish come from one workshop and fit together. Concealed or visible, built to your opening.</p>
+          <a href="carpentry.html#quote" data-door="Door frame">Ask about door frames</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Scroll to build ───── -->
+  <section class="build" id="estimate" aria-label="From an empty room to a finished kitchen">
+    <div class="build-stage">
+      <img src="assets/build/1-empty.jpg" alt="An empty room before the carpentry" data-b="0">
+      <img src="assets/build/2-mid.jpg" alt="Kitchen cabinet carcasses installed" data-b="1" loading="lazy">
+      <img src="assets/build/3-built.jpg" alt="The finished kitchen and dining room" data-b="2" loading="lazy">
+      <div class="build-panel">
+        <p class="eyebrow">Price estimate</p>
+        <h2>Scroll to build it.</h2>
+        <ol class="build-steps" id="buildSteps">
+          <li class="on"><b>01</b> Empty room</li>
+          <li><b>02</b> Cabinets go in</li>
+          <li><b>03</b> Finished</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Ben's price calculator ───── -->
+  <section class="block" id="calc">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Price estimate</p><h2>Price your <em>carpentry.</em></h2>
+        </div>
+        <p class="lede">Choose a piece, key in the size and pick your options. The price and the preview update as you go.</p>
+      </div>
+      <div class="est2">
+        <div>
+          <div class="step"><div class="step-h"><span class="sn">01</span><h3>Choose a piece</h3></div><div class="tiles" id="estItems" role="group" aria-label="Carpentry piece"></div></div>
+          <div class="step"><div class="step-h"><span class="sn">02</span><h3>Size</h3><small id="eSizeHint"></small></div>
+            <div class="dims">
+              <div class="field"><label for="eW">Width</label><input type="text" id="eW" inputmode="decimal"></div>
+              <div class="field" id="eHField"><label for="eH">Height</label><input type="text" id="eH" inputmode="decimal"></div>
+              <div class="field unit"><label for="eU">Unit</label><select id="eU"><option value="mm">mm</option><option value="cm">cm</option><option value="ft">feet</option></select></div>
+            </div>
+            <div class="presets" id="ePresets"></div>
+            <p class="std-note" id="eStd"></p>
+            <div class="est-err" id="eErr" role="alert"></div>
+          </div>
+          <div class="step"><div class="step-h"><span class="sn">03</span><h3>Options</h3></div><div id="estOpts"></div></div>
+          <div class="step"><div class="step-h"><span class="sn">04</span><h3>Surface and colour</h3></div>
+            <div class="og"><div class="og-l">Surface <em>(laminate is the base price)</em></div><div class="chipset" id="eMat"></div></div>
+            <div class="og"><div class="og-l">Laminate type <em id="eColName"></em></div><div class="swatchrow" id="eCol"></div></div>
+          </div>
+        </div>
+        <aside class="est-card" aria-live="polite">
+          <div class="viz" id="eDraw"></div>
+          <div class="body">
+            <div class="est-label">Estimated price</div>
+            <div class="est-price" id="ePrice"></div>
+            <div class="est-sub" id="eSub"></div>
+            <details class="est-more"><summary>How we worked it out</summary><dl class="summary-list" id="eBreak"></dl>
+  <ul class="included"><li>Made in Singapore</li><li>Site measurement</li><li>Delivery and installation</li><li>Soft-close hinges</li><li>1-year warranty</li></ul>
+            </details>
+            <button class="btn block" id="eQuote">Get an exact quote for this</button>
+            <a class="btn ghost block" id="eWa" href="#" target="_blank" rel="noopener" style="margin-top:10px;justify-content:center">Or send this estimate on WhatsApp</a>
+            <p class="est-note">An estimate before GST. Your final price is confirmed after we measure on site.</p>
+          </div>
+        </aside>
+      </div>
+      <strong id="eBarPrice" hidden></strong>
+    </div>
+  </section>
+
+{{quote}}
+  <!-- ───── Tenders ───── -->
+  <section class="tband" id="tenders">
+    <div class="wrap tband-in">
+      <div>
+        <h2>Planning a bigger project?</h2>
+        <p>We tender for joinery packages with main contractors, designers and developers. Ask us for our company details, process and experience.</p>
+      </div>
+      <a class="btn light" href="https://wa.me/6598221113?text=Hi%20M2D%20Carpentry%2C%20I%27d%20like%20to%20ask%20about%20a%20tender%20or%20commercial%20project." target="_blank" rel="noopener">Tenders and commercial</a>
+    </div>
+  </section>

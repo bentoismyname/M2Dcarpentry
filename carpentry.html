@@ -1,0 +1,255 @@
+<!doctype html>
+<!-- Built by build-carpentry-pages.py from the files in _parts/. Edit those, then run the script again. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bespoke carpentry and price estimate | M2D Carpentry</title>
+<meta name="description" content="Wardrobes, kitchens, feature walls, storage and doors, made to fit your home. Price your carpentry online and request a quote.">
+<meta name="theme-color" content="#F6F2EA">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=3">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="calc.css?v=111">
+<link rel="stylesheet" href="style.css?v=111">
+<script>(function(d){if(window.IntersectionObserver&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("rv-pre");setTimeout(function(){d.classList.remove("rv-pre")},2500)}})(document.documentElement)</script>
+</head>
+<body class="page-carpentry">
+
+<header class="top" id="top">
+  <a class="brand" href="index.html" aria-label="M2D Carpentry, home">
+    <img src="assets/m2d-brown.png" alt="M2D" width="1028" height="338">
+    <span>Carpentry</span>
+  </a>
+  <nav class="top-nav nav-all" aria-label="Pages">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="shop.html" data-page="shop">Shop</a>
+    <a href="carpentry.html" data-page="carpentry" class="on" aria-current="page">Carpentry</a>
+    <a href="about.html" data-page="about">Our story</a>
+    <a href="portfolio.html" data-page="portfolio">Portfolio</a>
+    <a href="blog.html" data-page="blog">Blog</a>
+    <a href="contact.html" data-page="contact">Contact us</a>
+  </nav>
+  <div class="top-right">
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="Open your cart">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <b id="cartCount" hidden>0</b>
+    </button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="topNav"><span></span><span></span></button>
+  </div>
+  <nav class="top-drop" id="topNav" aria-label="Menu">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="shop.html" data-page="shop">Shop</a>
+    <a href="carpentry.html" data-page="carpentry" class="on" aria-current="page">Carpentry</a>
+    <a href="about.html" data-page="about">Our story</a>
+    <a href="portfolio.html" data-page="portfolio">Portfolio</a>
+    <a href="blog.html" data-page="blog">Blog</a>
+    <a href="contact.html" data-page="contact">Contact us</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ───── Top of the page: a film of a team fitting out a living room plays once in the background and stops on the
+       finished room (app.js, buildFilm). It does not loop. Where films cannot play, the finished room is shown as a picture.
+       The room and the people in the film are generated pictures, not one of M2D's own projects. ───── -->
+  <section class="chero chero--video" id="cph">
+    <div class="chero__bg"><img src="assets/carpentry-hero/start.jpg" alt="" width="1920" height="1080"></div>
+    <div class="wrap chero__in">
+      <p class="eyebrow">Bespoke carpentry</p>
+      <h1>Built into<br>your home.</h1>
+      <p class="lede">Drawn for your home and built by our own team: cabinetry, walls, storage and doors, made to your size and laminate.</p>
+      <a class="btn" href="carpentry.html#estimate">Estimate a price</a>
+    </div>
+  </section>
+
+  <!-- ───── Bespoke carpentry and doors ───── -->
+  <section class="block alt" id="bespoke">
+    <div class="wrap">
+      <div class="bgrid" id="bespokeGrid"></div>
+
+      <div class="sec-head doors-head" id="doors">
+        <div>
+          <p class="eyebrow">Doors</p>
+          <h2>Flush and sliding doors, <em>made to fit.</em></h2>
+        </div>
+        <p class="lede">We make the doors too: solid core laminated doors and their frames, built to the opening on site and finished to match your carpentry.</p>
+      </div>
+      <div class="dgrid">
+        <article class="ctile door"><div class="dimg" style="background-image:url(assets/doors/flush.jpg)"></div>
+          <h3>Flush doors, concealed frame</h3><p>A flat door face with the frame hidden, so the door sits in line with the wall and the joins almost disappear. For bedrooms, studies and storerooms you want to blend in.</p>
+          <a href="carpentry.html#quote" data-door="Flush door, concealed frame">Ask about flush doors</a></article>
+        <article class="ctile door"><div class="dimg" style="background-image:url(assets/doors/sliding.jpg)"></div>
+          <h3>Sliding doors</h3><p>Doors that run on a track instead of swinging out, to save floor space. Slim frames with mirror, glass or panel inserts.</p>
+          <a href="carpentry.html#quote" data-door="Sliding door">Ask about sliding doors</a></article>
+        <article class="ctile door plain">
+          <h3>Solid core laminated doors</h3><p>A solid core door is heavier and quieter than a hollow one, and it holds its shape. We laminate both faces in the finish you choose, so it matches your wardrobes and walls.</p>
+          <a href="carpentry.html#quote" data-door="Solid core laminated door">Ask about solid core doors</a></article>
+        <article class="ctile door plain">
+          <h3>Door frames</h3><p>We make the frames as well, so the door, frame and finish come from one workshop and fit together. Concealed or visible, built to your opening.</p>
+          <a href="carpentry.html#quote" data-door="Door frame">Ask about door frames</a></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Scroll to build ───── -->
+  <section class="build" id="estimate" aria-label="From an empty room to a finished kitchen">
+    <div class="build-stage">
+      <img src="assets/build/1-empty.jpg" alt="An empty room before the carpentry" data-b="0">
+      <img src="assets/build/2-mid.jpg" alt="Kitchen cabinet carcasses installed" data-b="1" loading="lazy">
+      <img src="assets/build/3-built.jpg" alt="The finished kitchen and dining room" data-b="2" loading="lazy">
+      <div class="build-panel">
+        <p class="eyebrow">Price estimate</p>
+        <h2>Scroll to build it.</h2>
+        <ol class="build-steps" id="buildSteps">
+          <li class="on"><b>01</b> Empty room</li>
+          <li><b>02</b> Cabinets go in</li>
+          <li><b>03</b> Finished</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Ben's price calculator ───── -->
+  <section class="block" id="calc">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Price estimate</p><h2>Price your <em>carpentry.</em></h2>
+        </div>
+        <p class="lede">Choose a piece, key in the size and pick your options. The price and the preview update as you go.</p>
+      </div>
+      <div class="est2">
+        <div>
+          <div class="step"><div class="step-h"><span class="sn">01</span><h3>Choose a piece</h3></div><div class="tiles" id="estItems" role="group" aria-label="Carpentry piece"></div></div>
+          <div class="step"><div class="step-h"><span class="sn">02</span><h3>Size</h3><small id="eSizeHint"></small></div>
+            <div class="dims">
+              <div class="field"><label for="eW">Width</label><input type="text" id="eW" inputmode="decimal"></div>
+              <div class="field" id="eHField"><label for="eH">Height</label><input type="text" id="eH" inputmode="decimal"></div>
+              <div class="field unit"><label for="eU">Unit</label><select id="eU"><option value="mm">mm</option><option value="cm">cm</option><option value="ft">feet</option></select></div>
+            </div>
+            <div class="presets" id="ePresets"></div>
+            <p class="std-note" id="eStd"></p>
+            <div class="est-err" id="eErr" role="alert"></div>
+          </div>
+          <div class="step"><div class="step-h"><span class="sn">03</span><h3>Options</h3></div><div id="estOpts"></div></div>
+          <div class="step"><div class="step-h"><span class="sn">04</span><h3>Surface and colour</h3></div>
+            <div class="og"><div class="og-l">Surface <em>(laminate is the base price)</em></div><div class="chipset" id="eMat"></div></div>
+            <div class="og"><div class="og-l">Laminate type <em id="eColName"></em></div><div class="swatchrow" id="eCol"></div></div>
+          </div>
+        </div>
+        <aside class="est-card" aria-live="polite">
+          <div class="viz" id="eDraw"></div>
+          <div class="body">
+            <div class="est-label">Estimated price</div>
+            <div class="est-price" id="ePrice"></div>
+            <div class="est-sub" id="eSub"></div>
+            <details class="est-more"><summary>How we worked it out</summary><dl class="summary-list" id="eBreak"></dl>
+  <ul class="included"><li>Made in Singapore</li><li>Site measurement</li><li>Delivery and installation</li><li>Soft-close hinges</li><li>1-year warranty</li></ul>
+            </details>
+            <button class="btn block" id="eQuote">Get an exact quote for this</button>
+            <a class="btn ghost block" id="eWa" href="#" target="_blank" rel="noopener" style="margin-top:10px;justify-content:center">Or send this estimate on WhatsApp</a>
+            <p class="est-note">An estimate before GST. Your final price is confirmed after we measure on site.</p>
+          </div>
+        </aside>
+      </div>
+      <strong id="eBarPrice" hidden></strong>
+    </div>
+  </section>
+
+  <!-- ───── Request a quote ───── -->
+  <section class="block alt" id="quote">
+    <div class="wrap two">
+      <div>
+        <p class="eyebrow">Quote</p>
+        <h2>Request an exact quote.</h2>
+        <p class="lede" style="margin-top:14px">We usually reply within one working day.</p>
+        <ol class="qsteps">
+          <li><b>1</b><div><strong>Tell us about the space</strong><span>Photos, a floor plan or rough measurements are enough to start.</span></div></li>
+          <li><b>2</b><div><strong>Site measure and drawing</strong><span>We measure on site and send shop drawings with materials and a fixed quote.</span></div></li>
+          <li><b>3</b><div><strong>Fabrication and install</strong><span>Built in our workshop and installed by the people who built it.</span></div></li>
+        </ol>
+      </div>
+      <form class="qform ctile" id="quoteForm" novalidate>
+        <h3>Your details</h3>
+        <div id="qEst" class="q-est" hidden></div>
+        <fieldset><legend>What do you need?</legend><div class="chipset" id="needSeg"></div></fieldset>
+        <fieldset><legend>Property type</legend><div class="chipset" id="propSeg"></div></fieldset>
+        <div class="qrow">
+          <div class="field"><label for="bW">Width (mm)</label><input type="text" id="bW" inputmode="numeric"></div>
+          <div class="field"><label for="bH">Height (mm)</label><input type="text" id="bH" inputmode="numeric"></div>
+        </div>
+        <div class="field"><label for="bNotes">Anything to add? (optional)</label><textarea id="bNotes" rows="3"></textarea></div>
+        <div class="qrow">
+          <div class="field"><label for="bName">Name</label><input type="text" id="bName" autocomplete="name"></div>
+          <div class="field"><label for="bPhone">Mobile</label><input type="tel" id="bPhone" autocomplete="tel" inputmode="tel"></div>
+        </div>
+        <p class="est-err" id="qErr" role="alert"></p>
+        <button class="btn block" type="submit">Send my quote request</button>
+        <p class="form-note">This opens WhatsApp with your request written out. Attach any photos or drawings in the same chat. We reply within one working day.</p>
+      </form>
+    </div>
+  </section>
+  <!-- ───── Tenders ───── -->
+  <section class="tband" id="tenders">
+    <div class="wrap tband-in">
+      <div>
+        <h2>Planning a bigger project?</h2>
+        <p>We tender for joinery packages with main contractors, designers and developers. Ask us for our company details, process and experience.</p>
+      </div>
+      <a class="btn light" href="https://wa.me/6598221113?text=Hi%20M2D%20Carpentry%2C%20I%27d%20like%20to%20ask%20about%20a%20tender%20or%20commercial%20project." target="_blank" rel="noopener">Tenders and commercial</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand"><img src="assets/m2d-brown.png" alt="M2D" width="1028" height="338"><span>Carpentry</span></div>
+      <p>Furniture and bespoke carpentry, made in Singapore by a second-generation workshop. Part of M2D.</p>
+      <!-- M2D Carpentry's own Instagram and Facebook, as round buttons like the ones on m2decor.com -->
+      <div class="socials"><a href="https://www.instagram.com/m2dcarpentry/" target="_blank" rel="noopener" aria-label="M2D Carpentry on Instagram"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a><a href="https://www.facebook.com/p/M2DCarpentry-100095368721264/" target="_blank" rel="noopener" aria-label="M2D Carpentry on Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8h3.3z"/></svg></a></div>
+    </div>
+    <nav aria-label="Shop"><h4>Shop</h4><a href="shop.html">All furniture</a><a href="shop.html#custom">Made to size</a></nav>
+    <nav aria-label="Carpentry"><h4>Carpentry</h4><a href="carpentry.html">Bespoke carpentry</a><a href="carpentry.html#doors">Doors</a><a href="carpentry.html#estimate">Price estimate</a><a href="carpentry.html#quote">Request a quote</a><a href="portfolio.html">Portfolio</a><a href="carpentry.html#tenders">Tenders and commercial</a></nav>
+    <nav aria-label="About and contact"><h4>About and contact</h4><a href="about.html">Our story</a><a href="about.html#people">Our team</a><a href="blog.html">Blog</a><a href="contact.html">Contact us</a><a href="index.html#reviews">Reviews</a><a href="index.html#faq">FAQ</a><a href="https://www.m2decor.com" target="_blank" rel="noopener">M2D Interior Design</a><a href="https://wa.me/6598221113" target="_blank" rel="noopener">WhatsApp +65 9822 1113</a></nav>
+  </div>
+  <div class="wrap"><p class="fine">© 2026 M2 Decor Pte Ltd. UEN 201832713G.</p></div>
+  <!-- the word runs the full width of the footer; app.js sizes it to fit exactly -->
+  <p class="foot-big" aria-hidden="true"><span>Carpentry</span></p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6598221113" target="_blank" rel="noopener" aria-label="WhatsApp us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- ───── Piece card and cart: a side panel on wide screens, a sheet from the bottom on phones ───── -->
+<div class="card-back" id="cardBack" hidden></div>
+<aside class="card" id="card" role="dialog" aria-modal="true" aria-labelledby="cardName" hidden>
+  <button class="card-x" id="cardX" type="button" aria-label="Close">×</button>
+  <div class="card-imgs" id="cardImgs"></div>
+  <div class="card-body">
+    <p class="eyebrow" id="cardRoom"></p>
+    <h3 id="cardName"></h3>
+    <p class="card-price" id="cardPrice"></p>
+    <p class="card-desc" id="cardDesc"></p>
+    <dl class="card-facts" id="cardFacts"></dl>
+    <div class="card-buy" id="cardBuy"></div>
+    <a class="btn block" id="cardBtn" href="#"></a>
+    <a class="card-alt" id="cardAlt" href="#" target="_blank" rel="noopener"></a>
+  </div>
+</aside>
+<aside class="card cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <button class="card-x" id="cartX" type="button" aria-label="Close">×</button>
+  <div class="card-body">
+    <p class="eyebrow">Your cart</p>
+    <h3 id="cartTitle">Your pieces.</h3>
+    <div id="cartLines"></div>
+    <div id="cartFoot"></div>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js?v=111"></script>
+<script src="calc.js?v=111"></script>
+</body>
+</html>

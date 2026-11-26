@@ -1,0 +1,62 @@
+  <!-- ───── Portfolio hero: words on the left; on the right a slanted wall of three columns of photos.
+       The columns drift on their own (first and third up, the middle one down), scrolling the page pushes them along,
+       the wall leans a little towards the mouse, and pointing at it never stops it. Each photo opens its home.
+       The homes, photos and words are M2D's own, taken from m2decor.com/portfolio. The page builder fills in the photos. ───── -->
+  <section class="pfh" id="pfHero" aria-label="Our portfolio">
+    <div class="pfh-words">
+      <h1>Our <em>Portfolio.</em></h1>
+      <p class="lede">Our carpentry goes into every M2D home.</p>
+    </div>
+    <div class="pfh-stage">
+      <div class="pfh-wall" id="pfWall">
+{{wall}}
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Every home, in a grid. The page builder fills it in from _parts/projects.json. ───── -->
+  <section class="block" id="homes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h2>Step inside <em>our homes.</em></h2>
+        </div>
+      </div>
+    </div>
+    <div class="pgrid pjgrid bleed" id="pjGrid">
+{{projects}}
+    </div>
+  </section>
+
+  <!-- ───── On site: the crew at work ───── -->
+  <section class="block alt" id="recent">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">On site</p>
+          <h2>Recent work, <em>on site.</em></h2>
+        </div>
+      </div>
+      <div class="recent">
+        <figure class="ctile" style="background-image:url(assets/crew/2e76a775.jpg)" role="img" aria-label="Our carpenters fitting a kitchen"><figcaption>Kitchen install</figcaption></figure>
+        <figure class="ctile" style="background-image:url(assets/doors/flush.jpg)" role="img" aria-label="Flush doors with a reeded glass door"><figcaption>Flush doors</figcaption></figure>
+        <figure class="ctile" style="background-image:url(assets/crew/f35dc160.jpg)" role="img" aria-label="A carpenter finishing a curved counter"><figcaption>Curved counter</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="onsite">
+    <div class="wrap">
+      <div class="mosaic" id="floor" style="margin-top:0">
+        <figure class="ctile m-a" style="background-image:url(assets/crew/80b99668.jpg)"><figcaption>Kitchen install, all hands in</figcaption></figure>
+        <div class="ctile m-b text">
+          <p class="eyebrow">From the workshop floor</p>
+          <h3>Every piece is cut, edged, assembled and finished by our own team.</h3>
+        </div>
+        <figure class="ctile m-c" style="background-image:url(assets/crew/5cb539de.jpg)"><figcaption>Measuring up the island</figcaption></figure>
+        <figure class="ctile m-d" style="background-image:url(assets/crew/793f1c8a.jpg)"><figcaption>Up the ladder for the last fixing</figcaption></figure>
+        <figure class="ctile m-e" style="background-image:url(assets/crew/221580ee.jpg)"><figcaption>Curved panels laid out first</figcaption></figure>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,1017 @@
+[
+ {
+  "slug": "hotel-at-home",
+  "title": "Hotel at Home",
+  "lede": "Full-height backsplash, made for the bold, daring people who have seen everything and are constantly looking for new experiences and elevation.",
+  "place": "Anchorvale · 2023",
+  "kind": "Residential · 1-Room BTO",
+  "cover": "hotel/05.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "When you have a small bathroom, elevation is important. The layout and colour scheme used is a combination of natural and light materials and an extravagant colour palette to make your heart beat again and again."
+    ],
+    "mz": "d",
+    "imgs": [
+     "hotel/05.jpg",
+     "hotel/02.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "Custom-made walnut flute wall panels frame the walls of the bedroom and living area, creating the illusion of a home with grandeur and further enhancing our design theme."
+    ],
+    "mz": "b",
+    "imgs": [
+     "hotel/04.jpg",
+     "hotel/01.jpg",
+     "hotel/03.jpg"
+    ]
+   },
+   {
+    "side": "text",
+    "text": [
+     "Using furnishing as the focal point, a large LED TV and a white curved soft-suede sofa were selected to give an inviting, stylish lounge look, at the same time diverting attention from the space's diminutive size."
+    ],
+    "mz": "",
+    "imgs": []
+   }
+  ],
+  "prev": "rattan",
+  "next": "japandi-spirit",
+  "wall": [
+   "hotel/05.jpg",
+   "hotel/04.jpg"
+  ],
+  "dims": {
+   "hotel/05.jpg": [
+    1500,
+    1000
+   ],
+   "hotel/02.jpg": [
+    1500,
+    1000
+   ],
+   "hotel/04.jpg": [
+    1000,
+    1500
+   ],
+   "hotel/01.jpg": [
+    1000,
+    1500
+   ],
+   "hotel/03.jpg": [
+    1000,
+    1500
+   ]
+  }
+ },
+ {
+  "slug": "japandi-spirit",
+  "title": "Japandi Spirit",
+  "lede": "A sleek, minimalistic, wabi-sabi interior of Scandinavian and Japanese design. This home is a visual storyboard of consciously layered earthy colours and natural materials, without forgoing functionality.",
+  "place": "25 Rosewood Drive · 2022",
+  "kind": "Residential · HDB",
+  "cover": "japandi/07.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "The communal space works equally well for one person or a group of up to ten. The client loves to host friends and family, so a built-in settee was cleverly designed into the dining zone."
+    ],
+    "mz": "a",
+    "imgs": [
+     "japandi/07.jpg",
+     "japandi/02.jpg",
+     "japandi/03.jpg",
+     "japandi/01.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "Light oak, soft linen and warm white paint do the heavy lifting. Every surface was chosen to age gracefully and to let the natural light from the full-width windows carry the room."
+    ],
+    "mz": "b",
+    "imgs": [
+     "japandi/05.jpg",
+     "japandi/04.jpg",
+     "japandi/06.jpg"
+    ]
+   }
+  ],
+  "prev": "hotel-at-home",
+  "next": "embrace-serenity",
+  "wall": [
+   "japandi/07.jpg",
+   "japandi/01.jpg"
+  ],
+  "dims": {
+   "japandi/07.jpg": [
+    1500,
+    956
+   ],
+   "japandi/02.jpg": [
+    1500,
+    1125
+   ],
+   "japandi/03.jpg": [
+    1500,
+    1000
+   ],
+   "japandi/01.jpg": [
+    1000,
+    1500
+   ],
+   "japandi/05.jpg": [
+    1000,
+    1500
+   ],
+   "japandi/04.jpg": [
+    1500,
+    1000
+   ],
+   "japandi/06.jpg": [
+    1500,
+    1000
+   ]
+  }
+ },
+ {
+  "slug": "embrace-serenity",
+  "title": "Embrace Serenity",
+  "lede": "Creating an 'undesigned', warm and comforting space that feels like a home rather than an apartment.",
+  "place": "201B Woodleigh Link · 2023",
+  "kind": "Residential · HDB",
+  "cover": "serenity/06.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "Based on our client's wishes, it was clear throughout the process that we would use organic and dark materials. The curved walls, in contrast to mid-toned wood, plants and art, make this place feel like a unique home, not a showroom."
+    ],
+    "mz": "d",
+    "imgs": [
+     "serenity/06.jpg",
+     "serenity/02.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "Immerse yourself in a cosy kitchen where shades of green, brown and black intertwine with the soothing essence of nature. The interplay of light and dark, inspired by the natural world, creates an inviting atmosphere that exudes tranquillity and sophistication."
+    ],
+    "mz": "d",
+    "imgs": [
+     "serenity/01.jpg",
+     "serenity/04.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "Drawing inspiration from the allure of darkness, we crafted a luxurious foundation as the canvas for this project. Rich browns, deep greens, warm greys and muted tans come together harmoniously, enveloping you in a cocoon of comfort."
+    ],
+    "mz": "b",
+    "imgs": [
+     "serenity/07.jpg",
+     "serenity/05.jpg",
+     "serenity/03.jpg"
+    ]
+   }
+  ],
+  "prev": "japandi-spirit",
+  "next": "hozon",
+  "wall": [
+   "serenity/06.jpg",
+   "serenity/01.jpg"
+  ],
+  "dims": {
+   "serenity/06.jpg": [
+    1500,
+    1182
+   ],
+   "serenity/02.jpg": [
+    1500,
+    1125
+   ],
+   "serenity/01.jpg": [
+    1125,
+    1500
+   ],
+   "serenity/04.jpg": [
+    1125,
+    1500
+   ],
+   "serenity/07.jpg": [
+    1500,
+    1125
+   ],
+   "serenity/05.jpg": [
+    1125,
+    1500
+   ],
+   "serenity/03.jpg": [
+    1124,
+    1500
+   ]
+  }
+ },
+ {
+  "slug": "hozon",
+  "title": "Hozon",
+  "lede": "Minimalism does not mean 'nothing'. Uncluttered minimalism celebrates the elegance found in simplicity, creating environments that please the eye and provide respite from the chaos of the modern world.",
+  "place": "120B Rivervale Drive · 2023",
+  "kind": "Residential · HDB",
+  "cover": "hozon/01.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "Based on our client's wishes, we used light colours to evoke understated minimalism and elegance through the furnishings. Natural light plays a pivotal role, enhancing the openness of the space and creating a seamless connection between the interior and its surroundings."
+    ],
+    "mz": "b",
+    "imgs": [
+     "hozon/01.jpg",
+     "hozon/02.jpg",
+     "hozon/03.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "This design ethos extends beyond the physical, influencing lifestyle choices and fostering a mindset of intentional living. Stripping away excess embellishment embraces 'less is more', creating spaces that exude tranquillity and clarity."
+    ],
+    "mz": "a",
+    "imgs": [
+     "hozon/06.jpg",
+     "hozon/05.jpg",
+     "hozon/04.jpg",
+     "hozon/09.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "Even the bathroom was not spared. Thoughtful organisation, clean lines and storage solutions ensure that each item has its designated place, promoting both order and efficiency."
+    ],
+    "mz": "b",
+    "imgs": [
+     "hozon/07.jpg",
+     "hozon/10.jpg",
+     "hozon/08.jpg"
+    ]
+   }
+  ],
+  "prev": "embrace-serenity",
+  "next": "urban-fusion",
+  "wall": [
+   "hozon/01.jpg",
+   "hozon/02.jpg"
+  ],
+  "dims": {
+   "hozon/01.jpg": [
+    1500,
+    1125
+   ],
+   "hozon/02.jpg": [
+    1125,
+    1500
+   ],
+   "hozon/03.jpg": [
+    1500,
+    1125
+   ],
+   "hozon/06.jpg": [
+    1125,
+    1500
+   ],
+   "hozon/05.jpg": [
+    1125,
+    1500
+   ],
+   "hozon/04.jpg": [
+    1500,
+    1125
+   ],
+   "hozon/09.jpg": [
+    1500,
+    1125
+   ],
+   "hozon/07.jpg": [
+    1500,
+    1125
+   ],
+   "hozon/10.jpg": [
+    1500,
+    1125
+   ],
+   "hozon/08.jpg": [
+    1500,
+    1125
+   ]
+  }
+ },
+ {
+  "slug": "urban-fusion",
+  "title": "Urban Fusion",
+  "lede": "Semi-industrial design captures the essence of urban chic by blending raw, industrial elements with a touch of warmth and sophistication.",
+  "place": "6 Pari Dedap Walk · 2026",
+  "kind": "Residential · Semi-industrial",
+  "cover": "urban/04.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "Our client wanted a semi-industrial design that incorporates organic furnishings and soft textures to balance the rugged elements. Plush sofas, cosy rugs and strategically placed textiles create inviting spaces within the raw backdrop."
+    ],
+    "mz": "b",
+    "imgs": [
+     "urban/04.jpg",
+     "urban/01.jpg",
+     "urban/06.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "A palette of greys, whites and muted earthy hues lets the industrial elements stand out while providing a canvas for personal touches. Reclaimed wood, metal and factory-inspired lighting add character and a touch of history."
+    ],
+    "mz": "a",
+    "imgs": [
+     "urban/07.jpg",
+     "urban/09.jpg",
+     "urban/03.jpg",
+     "urban/02.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "The industrial aesthetic was kept to the wall and floor finishes. The bathroom, the highest-traffic space, keeps practicality as the key: no hanging elements, no reclaimed wood or metal, just neutral tones that let the vibe stand out."
+    ],
+    "mz": "b",
+    "imgs": [
+     "urban/08.jpg",
+     "urban/05.jpg",
+     "urban/10.jpg"
+    ]
+   }
+  ],
+  "prev": "hozon",
+  "next": "chaseki",
+  "wall": [
+   "urban/04.jpg",
+   "urban/06.jpg"
+  ],
+  "dims": {
+   "urban/04.jpg": [
+    1500,
+    1067
+   ],
+   "urban/01.jpg": [
+    1500,
+    1125
+   ],
+   "urban/06.jpg": [
+    1125,
+    1500
+   ],
+   "urban/07.jpg": [
+    1500,
+    1125
+   ],
+   "urban/09.jpg": [
+    1500,
+    1125
+   ],
+   "urban/03.jpg": [
+    1125,
+    1500
+   ],
+   "urban/02.jpg": [
+    1000,
+    1500
+   ],
+   "urban/08.jpg": [
+    1125,
+    1500
+   ],
+   "urban/05.jpg": [
+    1125,
+    1500
+   ],
+   "urban/10.jpg": [
+    1125,
+    1500
+   ]
+  }
+ },
+ {
+  "slug": "chaseki",
+  "title": "Chaseki",
+  "lede": "A sophisticated and inviting ambience in light beige. Soft curves and gentle lines define the furniture and architecture, contributing to an overall sense of fluidity and harmony.",
+  "place": "Hillview Rise · 2024",
+  "kind": "Residential · Condominium",
+  "cover": "chaseki/09.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "Our client wanted a theme that reflects calm and peace without any visual noise. Natural light floods the room through gracefully draped windows, enhancing the softness of the beige tones; light upholstery and plush throws add layers of cosiness."
+    ],
+    "mz": "b",
+    "imgs": [
+     "chaseki/09.jpg",
+     "chaseki/01.jpg",
+     "chaseki/03.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "In the main living space, streamlined furniture with built-in storage keeps personal items out of sight. Concealed doors maintain the seamless look and, when opened, reveal private retreats that continue the design language."
+    ],
+    "mz": "b",
+    "imgs": [
+     "chaseki/05.jpg",
+     "chaseki/02.jpg",
+     "chaseki/07.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "The study's feature wall is adorned with concave panels for texture and dimension, while the bathroom's panelling is designed to exude elegance, sophistication and comfort, a harmonious blend of function and opulence."
+    ],
+    "mz": "b",
+    "imgs": [
+     "chaseki/06.jpg",
+     "chaseki/04.jpg",
+     "chaseki/08.jpg"
+    ]
+   }
+  ],
+  "prev": "urban-fusion",
+  "next": "oak-and-ember",
+  "wall": [
+   "chaseki/09.jpg",
+   "chaseki/02.jpg"
+  ],
+  "dims": {
+   "chaseki/09.jpg": [
+    1500,
+    1125
+   ],
+   "chaseki/01.jpg": [
+    1500,
+    1125
+   ],
+   "chaseki/03.jpg": [
+    1500,
+    1125
+   ],
+   "chaseki/05.jpg": [
+    1500,
+    1125
+   ],
+   "chaseki/02.jpg": [
+    1125,
+    1500
+   ],
+   "chaseki/07.jpg": [
+    1125,
+    1500
+   ],
+   "chaseki/06.jpg": [
+    1125,
+    1500
+   ],
+   "chaseki/04.jpg": [
+    1125,
+    1500
+   ],
+   "chaseki/08.jpg": [
+    1500,
+    1125
+   ]
+  }
+ },
+ {
+  "slug": "oak-and-ember",
+  "title": "Oak & Ember",
+  "lede": "Light oak, fluted panels and a city view at dusk. A warm, uncluttered home where every wall earns its place.",
+  "place": "1C Cantonment Road · 2024",
+  "kind": "Residential · 5-Room HDB",
+  "cover": "cantonment/01.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "A continuous run of oak-toned carpentry ties the living, dining and entrance into one calm surface. The TV wall sits inside it, framed in a soft textured panel with lit display shelving to one side."
+    ],
+    "mz": "a",
+    "imgs": [
+     "cantonment/01.jpg",
+     "cantonment/02.jpg",
+     "cantonment/03.jpg",
+     "cantonment/04.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "At night the cove lighting takes over: a thin warm line along the ceiling, backlit shelves, and the city skyline through full-height blinds. Fluted panels soften the bedroom headboard wall and hide the wardrobe doors."
+    ],
+    "mz": "a",
+    "imgs": [
+     "cantonment/05.jpg",
+     "cantonment/06.jpg",
+     "cantonment/07.jpg",
+     "cantonment/08.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "The kitchen and bathroom stay quiet in pale stone and white, so the oak carries the whole home."
+    ],
+    "mz": "a",
+    "imgs": [
+     "cantonment/09.jpg",
+     "cantonment/10.jpg",
+     "cantonment/11.jpg",
+     "cantonment/12.jpg"
+    ]
+   }
+  ],
+  "prev": "chaseki",
+  "next": "fu",
+  "wall": [
+   "cantonment/01.jpg",
+   "cantonment/05.jpg"
+  ],
+  "dims": {
+   "cantonment/01.jpg": [
+    1500,
+    1125
+   ],
+   "cantonment/02.jpg": [
+    1500,
+    1125
+   ],
+   "cantonment/03.jpg": [
+    1500,
+    1125
+   ],
+   "cantonment/04.jpg": [
+    1500,
+    1125
+   ],
+   "cantonment/05.jpg": [
+    1125,
+    1500
+   ],
+   "cantonment/06.jpg": [
+    1500,
+    1125
+   ],
+   "cantonment/07.jpg": [
+    1500,
+    1125
+   ],
+   "cantonment/08.jpg": [
+    1125,
+    1500
+   ],
+   "cantonment/09.jpg": [
+    1125,
+    1500
+   ],
+   "cantonment/10.jpg": [
+    1125,
+    1500
+   ],
+   "cantonment/11.jpg": [
+    1125,
+    1500
+   ],
+   "cantonment/12.jpg": [
+    1125,
+    1500
+   ]
+  }
+ },
+ {
+  "slug": "fu",
+  "title": "Fú",
+  "lede": "A single character of calligraphy, two road bikes on a pegboard wall, and a curved sofa to come home to.",
+  "place": "27 West Coast · 2026",
+  "kind": "Residential · Condominium",
+  "cover": "westcoast/01.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "The brief was a home that could hold the owners' two passions in one open room: the bikes and the dinner table. A full-height pegboard wall hangs the bicycles like art, facing a long stone dining table under a soft fabric ceiling fan."
+    ],
+    "mz": "a",
+    "imgs": [
+     "westcoast/01.jpg",
+     "westcoast/02.jpg",
+     "westcoast/03.jpg",
+     "westcoast/04.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "A single 福 scroll anchors the sideboard, and the palette stays to warm greys, pale timber and cream boucle so nothing competes with it."
+    ],
+    "mz": "a",
+    "imgs": [
+     "westcoast/05.jpg",
+     "westcoast/06.jpg",
+     "westcoast/07.jpg",
+     "westcoast/08.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "The kitchen runs flush behind sliding panels; the bathrooms are wrapped in travertine-look porcelain with a lit niche and rain shower."
+    ],
+    "mz": "a",
+    "imgs": [
+     "westcoast/09.jpg",
+     "westcoast/10.jpg",
+     "westcoast/11.jpg",
+     "westcoast/12.jpg"
+    ]
+   }
+  ],
+  "prev": "oak-and-ember",
+  "next": "nimbus",
+  "wall": [
+   "westcoast/01.jpg",
+   "westcoast/03.jpg"
+  ],
+  "dims": {
+   "westcoast/01.jpg": [
+    1500,
+    1125
+   ],
+   "westcoast/02.jpg": [
+    1500,
+    1125
+   ],
+   "westcoast/03.jpg": [
+    1080,
+    1500
+   ],
+   "westcoast/04.jpg": [
+    1500,
+    1125
+   ],
+   "westcoast/05.jpg": [
+    1125,
+    1500
+   ],
+   "westcoast/06.jpg": [
+    1500,
+    1018
+   ],
+   "westcoast/07.jpg": [
+    1500,
+    1125
+   ],
+   "westcoast/08.jpg": [
+    1125,
+    1500
+   ],
+   "westcoast/09.jpg": [
+    1125,
+    1500
+   ],
+   "westcoast/10.jpg": [
+    1125,
+    1500
+   ],
+   "westcoast/11.jpg": [
+    1500,
+    1125
+   ],
+   "westcoast/12.jpg": [
+    1125,
+    1500
+   ]
+  }
+ },
+ {
+  "slug": "nimbus",
+  "title": "Nimbus",
+  "lede": "Soft curves, a timber slat screen and a sofa like a cloud. A home designed to lower your shoulders the moment you walk in.",
+  "place": "443 Punggol · 2025",
+  "kind": "Residential · 4-Room HDB BTO",
+  "cover": "punggol/01.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "A vertical timber slat screen divides the entrance from the living room without closing it off, letting light pass through and giving the entryway its own bench and shelf."
+    ],
+    "mz": "a",
+    "imgs": [
+     "punggol/01.jpg",
+     "punggol/02.jpg",
+     "punggol/03.jpg",
+     "punggol/04.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "The living room is almost entirely curves: a cream modular sofa, round ottomans, a soft-edged TV ledge and a curved partition wall that leads to the dining area. Textured plaster finishes keep the surfaces from feeling flat."
+    ],
+    "mz": "a",
+    "imgs": [
+     "punggol/05.jpg",
+     "punggol/06.jpg",
+     "punggol/07.jpg",
+     "punggol/08.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "The dining space is deliberately darker, with a black table and chairs under rattan pendants, and the bedrooms return to white with fluted headboards and a single warm wall light."
+    ],
+    "mz": "a",
+    "imgs": [
+     "punggol/09.jpg",
+     "punggol/10.jpg",
+     "punggol/11.jpg",
+     "punggol/12.jpg"
+    ]
+   }
+  ],
+  "prev": "fu",
+  "next": "sonata",
+  "wall": [
+   "punggol/01.jpg",
+   "punggol/06.jpg"
+  ],
+  "dims": {
+   "punggol/01.jpg": [
+    1500,
+    1125
+   ],
+   "punggol/02.jpg": [
+    1500,
+    1125
+   ],
+   "punggol/03.jpg": [
+    1500,
+    1124
+   ],
+   "punggol/04.jpg": [
+    1500,
+    1091
+   ],
+   "punggol/05.jpg": [
+    1500,
+    1125
+   ],
+   "punggol/06.jpg": [
+    1125,
+    1500
+   ],
+   "punggol/07.jpg": [
+    1500,
+    1125
+   ],
+   "punggol/08.jpg": [
+    1125,
+    1500
+   ],
+   "punggol/09.jpg": [
+    1500,
+    1125
+   ],
+   "punggol/10.jpg": [
+    1500,
+    1125
+   ],
+   "punggol/11.jpg": [
+    1125,
+    1500
+   ],
+   "punggol/12.jpg": [
+    1125,
+    1500
+   ]
+  }
+ },
+ {
+  "slug": "sonata",
+  "title": "Sonata",
+  "lede": "Herringbone floors, a live-edge dining table and room for the piano. A resale flat rebuilt around music and light.",
+  "place": "48 Strathmore Avenue · 2026",
+  "kind": "Residential · HDB",
+  "cover": "strathmore/01.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "The original flat had a dark feature wall and a narrow living room. We opened the plan, laid pale herringbone vinyl throughout and ran a wall of flush white cabinetry down one side to hide storage and the household shelter."
+    ],
+    "mz": "a",
+    "imgs": [
+     "strathmore/01.jpg",
+     "strathmore/02.jpg",
+     "strathmore/03.jpg",
+     "strathmore/04.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "A live-edge timber table on a single pedestal sits between the entrance and the sofa, with a built-in bench on the window side. The piano has its own alcove under a framed print."
+    ],
+    "mz": "a",
+    "imgs": [
+     "strathmore/05.jpg",
+     "strathmore/06.jpg",
+     "strathmore/07.jpg",
+     "strathmore/08.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "An olive tree marks the entrance, and the kitchen and bathroom pick up the same pale timber and white stone."
+    ],
+    "mz": "a",
+    "imgs": [
+     "strathmore/09.jpg",
+     "strathmore/10.jpg",
+     "strathmore/11.jpg",
+     "strathmore/12.jpg"
+    ]
+   }
+  ],
+  "prev": "nimbus",
+  "next": "rattan",
+  "wall": [
+   "strathmore/01.jpg",
+   "strathmore/06.jpg"
+  ],
+  "dims": {
+   "strathmore/01.jpg": [
+    1500,
+    1125
+   ],
+   "strathmore/02.jpg": [
+    1500,
+    1125
+   ],
+   "strathmore/03.jpg": [
+    1500,
+    1125
+   ],
+   "strathmore/04.jpg": [
+    1500,
+    1125
+   ],
+   "strathmore/05.jpg": [
+    1500,
+    1131
+   ],
+   "strathmore/06.jpg": [
+    1125,
+    1500
+   ],
+   "strathmore/07.jpg": [
+    1125,
+    1500
+   ],
+   "strathmore/08.jpg": [
+    1125,
+    1500
+   ],
+   "strathmore/09.jpg": [
+    1125,
+    1500
+   ],
+   "strathmore/10.jpg": [
+    1125,
+    1500
+   ],
+   "strathmore/11.jpg": [
+    1125,
+    1500
+   ],
+   "strathmore/12.jpg": [
+    1500,
+    1125
+   ]
+  }
+ },
+ {
+  "slug": "rattan",
+  "title": "Rattan",
+  "lede": "Rattan pendants over a marble island, checkerboard tiles at the door, and a round brass mirror. Small flat, big character.",
+  "place": "128 Bedok North Street 2 · 2025",
+  "kind": "Residential · 3-Room HDB",
+  "cover": "bedok/01.jpg",
+  "blocks": [
+   {
+    "side": "l",
+    "text": [
+     "In a three-room flat the kitchen does the most work, so we gave it the most character: a marble-look island with bar seating, two oversized rattan pendants and sage-grey shaker cabinets along the window wall."
+    ],
+    "mz": "b",
+    "imgs": [
+     "bedok/01.jpg",
+     "bedok/02.jpg",
+     "bedok/03.jpg"
+    ]
+   },
+   {
+    "side": "r",
+    "text": [
+     "The entrance gets a classic black-and-white checkerboard floor with a built-in bench and shoe cabinets, meeting the timber parquet of the living room at a clean line."
+    ],
+    "mz": "a",
+    "imgs": [
+     "bedok/04.jpg",
+     "bedok/05.jpg",
+     "bedok/06.jpg",
+     "bedok/07.jpg"
+    ]
+   },
+   {
+    "side": "l",
+    "text": [
+     "The bathroom vanity is a fluted white curve under a round brass mirror; the bedroom keeps to white, with a fluted headboard panel and a single ring wall light."
+    ],
+    "mz": "b",
+    "imgs": [
+     "bedok/08.jpg",
+     "bedok/09.jpg",
+     "bedok/10.jpg"
+    ]
+   }
+  ],
+  "prev": "sonata",
+  "next": "hotel-at-home",
+  "wall": [
+   "bedok/01.jpg",
+   "bedok/02.jpg"
+  ],
+  "dims": {
+   "bedok/01.jpg": [
+    1500,
+    1125
+   ],
+   "bedok/02.jpg": [
+    844,
+    1500
+   ],
+   "bedok/03.jpg": [
+    1125,
+    1500
+   ],
+   "bedok/04.jpg": [
+    1125,
+    1500
+   ],
+   "bedok/05.jpg": [
+    1125,
+    1500
+   ],
+   "bedok/06.jpg": [
+    1125,
+    1500
+   ],
+   "bedok/07.jpg": [
+    1125,
+    1500
+   ],
+   "bedok/08.jpg": [
+    1124,
+    1500
+   ],
+   "bedok/09.jpg": [
+    844,
+    1500
+   ],
+   "bedok/10.jpg": [
+    1125,
+    1500
+   ]
+  }
+ }
+]

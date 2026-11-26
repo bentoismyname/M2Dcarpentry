@@ -1,0 +1,202 @@
+<!doctype html>
+<!-- Built by build-carpentry-pages.py from the files in _parts/. Edit those, then run the script again. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio | M2D Carpentry</title>
+<meta name="description" content="Step inside M2D&#x27;s homes: eleven finished homes in Singapore, and the crew at work on site.">
+<meta name="theme-color" content="#F6F2EA">
+<link rel="icon" type="image/png" href="assets/favicon.png?v=3">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
+<link rel="stylesheet" href="style.css?v=111">
+<script>(function(d){if(window.IntersectionObserver&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("rv-pre");setTimeout(function(){d.classList.remove("rv-pre")},2500)}})(document.documentElement)</script>
+</head>
+<body class="page-portfolio">
+
+<header class="top" id="top">
+  <a class="brand" href="index.html" aria-label="M2D Carpentry, home">
+    <img src="assets/m2d-brown.png" alt="M2D" width="1028" height="338">
+    <span>Carpentry</span>
+  </a>
+  <nav class="top-nav nav-all" aria-label="Pages">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="shop.html" data-page="shop">Shop</a>
+    <a href="carpentry.html" data-page="carpentry">Carpentry</a>
+    <a href="about.html" data-page="about">Our story</a>
+    <a href="portfolio.html" data-page="portfolio" class="on" aria-current="page">Portfolio</a>
+    <a href="blog.html" data-page="blog">Blog</a>
+    <a href="contact.html" data-page="contact">Contact us</a>
+  </nav>
+  <div class="top-right">
+    <button class="cart-btn" id="cartBtn" type="button" aria-label="Open your cart">
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 8h14l-1.2 11.2a1 1 0 0 1-1 .8H7.2a1 1 0 0 1-1-.8L5 8Z"/><path d="M9 8V6.5a3 3 0 0 1 6 0V8"/></svg>
+      <b id="cartCount" hidden>0</b>
+    </button>
+    <button class="menu-btn" id="menuBtn" type="button" aria-label="Menu" aria-expanded="false" aria-controls="topNav"><span></span><span></span></button>
+  </div>
+  <nav class="top-drop" id="topNav" aria-label="Menu">
+    <a href="index.html" data-page="home">Home</a>
+    <a href="shop.html" data-page="shop">Shop</a>
+    <a href="carpentry.html" data-page="carpentry">Carpentry</a>
+    <a href="about.html" data-page="about">Our story</a>
+    <a href="portfolio.html" data-page="portfolio" class="on" aria-current="page">Portfolio</a>
+    <a href="blog.html" data-page="blog">Blog</a>
+    <a href="contact.html" data-page="contact">Contact us</a>
+  </nav>
+</header>
+
+<main>
+  <!-- ───── Portfolio hero: words on the left; on the right a slanted wall of three columns of photos.
+       The columns drift on their own (first and third up, the middle one down), scrolling the page pushes them along,
+       the wall leans a little towards the mouse, and pointing at it never stops it. Each photo opens its home.
+       The homes, photos and words are M2D's own, taken from m2decor.com/portfolio. The page builder fills in the photos. ───── -->
+  <section class="pfh" id="pfHero" aria-label="Our portfolio">
+    <div class="pfh-words">
+      <h1>Our <em>Portfolio.</em></h1>
+      <p class="lede">Our carpentry goes into every M2D home.</p>
+    </div>
+    <div class="pfh-stage">
+      <div class="pfh-wall" id="pfWall">
+        <div class="wl-col"><div class="wl-track">
+          <a class="wl-card" href="project-hotel-at-home.html" style="aspect-ratio:1500/1000"><img src="assets/portfolio/t/hotel-05.jpg" alt="Hotel at Home, Anchorvale · 2023" width="1500" height="1000" draggable="false"><span class="wl-cap"><b>Hotel at Home</b><i>Anchorvale · 2023</i></span></a>
+          <a class="wl-card" href="project-hozon.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/hozon-01.jpg" alt="Hozon, 120B Rivervale Drive · 2023" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Hozon</b><i>120B Rivervale Drive · 2023</i></span></a>
+          <a class="wl-card" href="project-oak-and-ember.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/cantonment-01.jpg" alt="Oak &amp; Ember, 1C Cantonment Road · 2024" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Oak &amp; Ember</b><i>1C Cantonment Road · 2024</i></span></a>
+          <a class="wl-card" href="project-sonata.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/strathmore-01.jpg" alt="Sonata, 48 Strathmore Avenue · 2026" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Sonata</b><i>48 Strathmore Avenue · 2026</i></span></a>
+          <a class="wl-card" href="project-sonata.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/strathmore-06.jpg" alt="Sonata, 48 Strathmore Avenue · 2026" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Sonata</b><i>48 Strathmore Avenue · 2026</i></span></a>
+          <a class="wl-card" href="project-oak-and-ember.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/cantonment-05.jpg" alt="Oak &amp; Ember, 1C Cantonment Road · 2024" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Oak &amp; Ember</b><i>1C Cantonment Road · 2024</i></span></a>
+          <a class="wl-card" href="project-hozon.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/hozon-02.jpg" alt="Hozon, 120B Rivervale Drive · 2023" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Hozon</b><i>120B Rivervale Drive · 2023</i></span></a>
+          <a class="wl-card" href="project-hotel-at-home.html" style="aspect-ratio:1000/1500"><img src="assets/portfolio/t/hotel-04.jpg" alt="Hotel at Home, Anchorvale · 2023" width="1000" height="1500" draggable="false"><span class="wl-cap"><b>Hotel at Home</b><i>Anchorvale · 2023</i></span></a>
+        </div></div>
+        <div class="wl-col"><div class="wl-track">
+          <a class="wl-card" href="project-japandi-spirit.html" style="aspect-ratio:1500/956"><img src="assets/portfolio/t/japandi-07.jpg" alt="Japandi Spirit, 25 Rosewood Drive · 2022" width="1500" height="956" draggable="false"><span class="wl-cap"><b>Japandi Spirit</b><i>25 Rosewood Drive · 2022</i></span></a>
+          <a class="wl-card" href="project-urban-fusion.html" style="aspect-ratio:1500/1067"><img src="assets/portfolio/t/urban-04.jpg" alt="Urban Fusion, 6 Pari Dedap Walk · 2026" width="1500" height="1067" draggable="false"><span class="wl-cap"><b>Urban Fusion</b><i>6 Pari Dedap Walk · 2026</i></span></a>
+          <a class="wl-card" href="project-fu.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/westcoast-01.jpg" alt="Fú, 27 West Coast · 2026" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Fú</b><i>27 West Coast · 2026</i></span></a>
+          <a class="wl-card" href="project-rattan.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/bedok-01.jpg" alt="Rattan, 128 Bedok North Street 2 · 2025" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Rattan</b><i>128 Bedok North Street 2 · 2025</i></span></a>
+          <a class="wl-card" href="project-nimbus.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/punggol-06.jpg" alt="Nimbus, 443 Punggol · 2025" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Nimbus</b><i>443 Punggol · 2025</i></span></a>
+          <a class="wl-card" href="project-chaseki.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/chaseki-02.jpg" alt="Chaseki, Hillview Rise · 2024" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Chaseki</b><i>Hillview Rise · 2024</i></span></a>
+          <a class="wl-card" href="project-embrace-serenity.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/serenity-01.jpg" alt="Embrace Serenity, 201B Woodleigh Link · 2023" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Embrace Serenity</b><i>201B Woodleigh Link · 2023</i></span></a>
+        </div></div>
+        <div class="wl-col"><div class="wl-track">
+          <a class="wl-card" href="project-embrace-serenity.html" style="aspect-ratio:1500/1182"><img src="assets/portfolio/t/serenity-06.jpg" alt="Embrace Serenity, 201B Woodleigh Link · 2023" width="1500" height="1182" draggable="false"><span class="wl-cap"><b>Embrace Serenity</b><i>201B Woodleigh Link · 2023</i></span></a>
+          <a class="wl-card" href="project-chaseki.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/chaseki-09.jpg" alt="Chaseki, Hillview Rise · 2024" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Chaseki</b><i>Hillview Rise · 2024</i></span></a>
+          <a class="wl-card" href="project-nimbus.html" style="aspect-ratio:1500/1125"><img src="assets/portfolio/t/punggol-01.jpg" alt="Nimbus, 443 Punggol · 2025" width="1500" height="1125" draggable="false"><span class="wl-cap"><b>Nimbus</b><i>443 Punggol · 2025</i></span></a>
+          <a class="wl-card" href="project-rattan.html" style="aspect-ratio:844/1500"><img src="assets/portfolio/t/bedok-02.jpg" alt="Rattan, 128 Bedok North Street 2 · 2025" width="844" height="1500" draggable="false"><span class="wl-cap"><b>Rattan</b><i>128 Bedok North Street 2 · 2025</i></span></a>
+          <a class="wl-card" href="project-fu.html" style="aspect-ratio:1080/1500"><img src="assets/portfolio/t/westcoast-03.jpg" alt="Fú, 27 West Coast · 2026" width="1080" height="1500" draggable="false"><span class="wl-cap"><b>Fú</b><i>27 West Coast · 2026</i></span></a>
+          <a class="wl-card" href="project-urban-fusion.html" style="aspect-ratio:1125/1500"><img src="assets/portfolio/t/urban-06.jpg" alt="Urban Fusion, 6 Pari Dedap Walk · 2026" width="1125" height="1500" draggable="false"><span class="wl-cap"><b>Urban Fusion</b><i>6 Pari Dedap Walk · 2026</i></span></a>
+          <a class="wl-card" href="project-japandi-spirit.html" style="aspect-ratio:1000/1500"><img src="assets/portfolio/t/japandi-01.jpg" alt="Japandi Spirit, 25 Rosewood Drive · 2022" width="1000" height="1500" draggable="false"><span class="wl-cap"><b>Japandi Spirit</b><i>25 Rosewood Drive · 2022</i></span></a>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Every home, in a grid. The page builder fills it in from _parts/projects.json. ───── -->
+  <section class="block" id="homes">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Portfolio</p>
+          <h2>Step inside <em>our homes.</em></h2>
+        </div>
+      </div>
+    </div>
+    <div class="pgrid pjgrid bleed" id="pjGrid">
+      <div class="sc pj"><a class="sc-link" href="project-hotel-at-home.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/hotel-05.jpg" alt="Hotel at Home" loading="lazy" width="1500" height="1000"></span><span class="sc-meta"><small>Residential · 1-Room BTO</small><strong>Hotel at Home</strong><em>Anchorvale · 2023</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-japandi-spirit.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/japandi-07.jpg" alt="Japandi Spirit" loading="lazy" width="1500" height="956"></span><span class="sc-meta"><small>Residential · HDB</small><strong>Japandi Spirit</strong><em>25 Rosewood Drive · 2022</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-embrace-serenity.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/serenity-06.jpg" alt="Embrace Serenity" loading="lazy" width="1500" height="1182"></span><span class="sc-meta"><small>Residential · HDB</small><strong>Embrace Serenity</strong><em>201B Woodleigh Link · 2023</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-hozon.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/hozon-01.jpg" alt="Hozon" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · HDB</small><strong>Hozon</strong><em>120B Rivervale Drive · 2023</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-urban-fusion.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/urban-04.jpg" alt="Urban Fusion" loading="lazy" width="1500" height="1067"></span><span class="sc-meta"><small>Residential · Semi-industrial</small><strong>Urban Fusion</strong><em>6 Pari Dedap Walk · 2026</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-chaseki.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/chaseki-09.jpg" alt="Chaseki" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · Condominium</small><strong>Chaseki</strong><em>Hillview Rise · 2024</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-oak-and-ember.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/cantonment-01.jpg" alt="Oak &amp; Ember" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · 5-Room HDB</small><strong>Oak &amp; Ember</strong><em>1C Cantonment Road · 2024</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-fu.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/westcoast-01.jpg" alt="Fú" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · Condominium</small><strong>Fú</strong><em>27 West Coast · 2026</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-nimbus.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/punggol-01.jpg" alt="Nimbus" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · 4-Room HDB BTO</small><strong>Nimbus</strong><em>443 Punggol · 2025</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-sonata.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/strathmore-01.jpg" alt="Sonata" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · HDB</small><strong>Sonata</strong><em>48 Strathmore Avenue · 2026</em></span></a></div>
+      <div class="sc pj"><a class="sc-link" href="project-rattan.html"><span class="sc-pic"><img class="cover" src="assets/portfolio/t/bedok-01.jpg" alt="Rattan" loading="lazy" width="1500" height="1125"></span><span class="sc-meta"><small>Residential · 3-Room HDB</small><strong>Rattan</strong><em>128 Bedok North Street 2 · 2025</em></span></a></div>
+    </div>
+  </section>
+
+  <!-- ───── On site: the crew at work ───── -->
+  <section class="block alt" id="recent">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">On site</p>
+          <h2>Recent work, <em>on site.</em></h2>
+        </div>
+      </div>
+      <div class="recent">
+        <figure class="ctile" style="background-image:url(assets/crew/2e76a775.jpg)" role="img" aria-label="Our carpenters fitting a kitchen"><figcaption>Kitchen install</figcaption></figure>
+        <figure class="ctile" style="background-image:url(assets/doors/flush.jpg)" role="img" aria-label="Flush doors with a reeded glass door"><figcaption>Flush doors</figcaption></figure>
+        <figure class="ctile" style="background-image:url(assets/crew/f35dc160.jpg)" role="img" aria-label="A carpenter finishing a curved counter"><figcaption>Curved counter</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="onsite">
+    <div class="wrap">
+      <div class="mosaic" id="floor" style="margin-top:0">
+        <figure class="ctile m-a" style="background-image:url(assets/crew/80b99668.jpg)"><figcaption>Kitchen install, all hands in</figcaption></figure>
+        <div class="ctile m-b text">
+          <p class="eyebrow">From the workshop floor</p>
+          <h3>Every piece is cut, edged, assembled and finished by our own team.</h3>
+        </div>
+        <figure class="ctile m-c" style="background-image:url(assets/crew/5cb539de.jpg)"><figcaption>Measuring up the island</figcaption></figure>
+        <figure class="ctile m-d" style="background-image:url(assets/crew/793f1c8a.jpg)"><figcaption>Up the ladder for the last fixing</figcaption></figure>
+        <figure class="ctile m-e" style="background-image:url(assets/crew/221580ee.jpg)"><figcaption>Curved panels laid out first</figcaption></figure>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="foot-brand"><img src="assets/m2d-brown.png" alt="M2D" width="1028" height="338"><span>Carpentry</span></div>
+      <p>Furniture and bespoke carpentry, made in Singapore by a second-generation workshop. Part of M2D.</p>
+      <!-- M2D Carpentry's own Instagram and Facebook, as round buttons like the ones on m2decor.com -->
+      <div class="socials"><a href="https://www.instagram.com/m2dcarpentry/" target="_blank" rel="noopener" aria-label="M2D Carpentry on Instagram"><svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.2.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.2.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2-.1-1.2-.1-1.6-.1-4.8s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4 1.2-.1 1.6-.1 4.8-.1M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6 1.2.1 1.6.1 4.9.1s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg></a><a href="https://www.facebook.com/p/M2DCarpentry-100095368721264/" target="_blank" rel="noopener" aria-label="M2D Carpentry on Facebook"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M13.5 22v-8h2.7l.4-3.2h-3.1V8.8c0-.9.3-1.5 1.6-1.5h1.7V4.4c-.3 0-1.3-.1-2.5-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.5V14h2.7v8h3.3z"/></svg></a></div>
+    </div>
+    <nav aria-label="Shop"><h4>Shop</h4><a href="shop.html">All furniture</a><a href="shop.html#custom">Made to size</a></nav>
+    <nav aria-label="Carpentry"><h4>Carpentry</h4><a href="carpentry.html">Bespoke carpentry</a><a href="carpentry.html#doors">Doors</a><a href="carpentry.html#estimate">Price estimate</a><a href="carpentry.html#quote">Request a quote</a><a href="portfolio.html">Portfolio</a><a href="carpentry.html#tenders">Tenders and commercial</a></nav>
+    <nav aria-label="About and contact"><h4>About and contact</h4><a href="about.html">Our story</a><a href="about.html#people">Our team</a><a href="blog.html">Blog</a><a href="contact.html">Contact us</a><a href="index.html#reviews">Reviews</a><a href="index.html#faq">FAQ</a><a href="https://www.m2decor.com" target="_blank" rel="noopener">M2D Interior Design</a><a href="https://wa.me/6598221113" target="_blank" rel="noopener">WhatsApp +65 9822 1113</a></nav>
+  </div>
+  <div class="wrap"><p class="fine">© 2026 M2 Decor Pte Ltd. UEN 201832713G.</p></div>
+  <!-- the word runs the full width of the footer; app.js sizes it to fit exactly -->
+  <p class="foot-big" aria-hidden="true"><span>Carpentry</span></p>
+</footer>
+
+<a class="wa-float" href="https://wa.me/6598221113" target="_blank" rel="noopener" aria-label="WhatsApp us"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></a>
+
+<!-- ───── Piece card and cart: a side panel on wide screens, a sheet from the bottom on phones ───── -->
+<div class="card-back" id="cardBack" hidden></div>
+<aside class="card" id="card" role="dialog" aria-modal="true" aria-labelledby="cardName" hidden>
+  <button class="card-x" id="cardX" type="button" aria-label="Close">×</button>
+  <div class="card-imgs" id="cardImgs"></div>
+  <div class="card-body">
+    <p class="eyebrow" id="cardRoom"></p>
+    <h3 id="cardName"></h3>
+    <p class="card-price" id="cardPrice"></p>
+    <p class="card-desc" id="cardDesc"></p>
+    <dl class="card-facts" id="cardFacts"></dl>
+    <div class="card-buy" id="cardBuy"></div>
+    <a class="btn block" id="cardBtn" href="#"></a>
+    <a class="card-alt" id="cardAlt" href="#" target="_blank" rel="noopener"></a>
+  </div>
+</aside>
+<aside class="card cart" id="cart" role="dialog" aria-modal="true" aria-labelledby="cartTitle" hidden>
+  <button class="card-x" id="cartX" type="button" aria-label="Close">×</button>
+  <div class="card-body">
+    <p class="eyebrow">Your cart</p>
+    <h3 id="cartTitle">Your pieces.</h3>
+    <div id="cartLines"></div>
+    <div id="cartFoot"></div>
+  </div>
+</aside>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script src="app.js?v=111"></script>
+</body>
+</html>

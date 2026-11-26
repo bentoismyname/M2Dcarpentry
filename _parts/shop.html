@@ -1,0 +1,74 @@
+  <!-- ───── One piece: opens from the shop at #item-<id>, with the rest of the page put away ───── -->
+  <section class="item" id="item" hidden>
+    <div class="wrap">
+      <nav class="crumbs" aria-label="You are here"><a href="#shop">Shop</a><span aria-hidden="true">/</span><span id="itType"></span><span aria-hidden="true">/</span><b id="itCrumb"></b></nav>
+      <div class="item-grid">
+        <div class="item-gal">
+          <div class="item-main"><img id="itMain" alt=""></div>
+          <div class="item-thumbs" id="itThumbs"></div>
+        </div>
+        <div class="item-info">
+          <span class="sc-tag" id="itTag"></span>
+          <h1 id="itName"></h1>
+          <p class="item-price" id="itPrice"></p>
+          <p class="item-desc" id="itDesc"></p>
+          <div class="item-buy" id="itBuy"></div>
+          <a class="btn ghost block" id="itWa" href="#" target="_blank" rel="noopener">Ask about this piece on WhatsApp</a>
+          <dl class="facts item-facts" id="itFacts"></dl>
+          <p class="item-size">Need a different size? <a href="#custom">We make it to your size.</a></p>
+        </div>
+      </div>
+      <div class="item-more">
+        <div class="item-more-head"><h2>More pieces.</h2><a class="btn ghost small" href="#shop">Back to the shop</a></div>
+        <div class="pgrid" id="itMore"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───── Shop ───── -->
+  <!-- ───── Shop hero: the photo and the heading. The room starts dark and daylight comes in from the window. ───── -->
+  <section class="shop-hero" id="shopHero" aria-label="Shop the furniture">
+    <div class="wrap">
+      <div class="sh-pic">
+        <div class="sh-plate">
+          <img src="assets/shop/hero.jpg" alt="A living room with the Sentosa coffee set in front of a walnut wall" width="1672" height="941">
+          <!-- daylight comes in when the page opens: this layer starts dark and clears from the window on the right -->
+          <div class="sh-dark" aria-hidden="true"></div>
+        </div>
+        <div class="sh-copy">
+          <h1>Shop the <em>furniture.</em></h1>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block shop" id="shop">
+    <div class="wrap shop-intro">
+      <h2>All the pieces.</h2>
+      <div class="chips" id="shopFilter" role="group" aria-label="Filter by type"></div>
+    </div>
+    <!-- the tiles run edge to edge, with a thin line between them -->
+    <div class="pgrid bleed" id="shopGrid"></div>
+  </section>
+
+  <!-- ───── Made to size ───── -->
+  <section class="block alt" id="custom">
+    <div class="wrap">
+      <div class="sec-head">
+        <div>
+          <p class="eyebrow">Made to size</p>
+          <h2>Made to <em>your size.</em></h2>
+        </div>
+        <div>
+          <p class="lede">Every piece above can be built to fit your wall, your room and your taste. Tell us the size and the carpenter who will build it will draw it up.</p>
+          <a class="btn" style="margin-top:20px" href="carpentry.html#quote" data-need="Furniture piece">Ask about a size</a>
+        </div>
+      </div>
+      <ul class="three">
+        <li class="ctile"><b>01</b><strong>Your dimensions</strong><span>Tell us the width, depth and height. We redraw the piece and confirm the price before we cut anything.</span></li>
+        <li class="ctile"><b>02</b><strong>Your laminate</strong><span>Wood grains in oak, walnut, teak and black teak, flat colours, metal, or anti-fingerprint Protak.</span></li>
+        <li class="ctile"><b>03</b><strong>Your layout</strong><span>Add drawers, doors, open shelves or lighting. If you can sketch it, we can build it.</span></li>
+      </ul>
+    </div>
+  </section>
+
