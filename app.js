@@ -1042,3 +1042,27 @@ addEventListener("pageshow", () => $$(".veil").forEach((v) => v.remove())); // c
   const hide = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) e.target.classList.remove("in"); }), { threshold: 0 });
   els.forEach((el) => { show.observe(el); hide.observe(el); });
 })();
+
+/* Buttons, as on m2decor.com: the label is written twice, one above the other; on hover the first rolls up and
+   away and the second rolls in from below. Buttons that scripts add or relabel later are wrapped as well. */
+(function rollButtons() {
+  if (reduce) return;
+  const wrap = (b) => {
+    if (b.classList.contains("sc-add")) return;
+    [...b.childNodes].forEach((n) => {
+      if (n.nodeType !== 3 || !n.textContent.trim()) return;
+      const t = n.textContent.trim(), w = document.createElement("span");
+      w.className = "btn__t";
+      const one = document.createElement("span"), two = document.createElement("span");
+      one.textContent = t; two.textContent = t; two.setAttribute("aria-hidden", "true");
+      w.append(one, two);
+      n.replaceWith(w);
+    });
+  };
+  const all = (root) => { if (root.matches && root.matches(".btn")) wrap(root); if (root.querySelectorAll) root.querySelectorAll(".btn").forEach(wrap); };
+  all(document);
+  if ("MutationObserver" in window) new MutationObserver((ms) => ms.forEach((m) => {
+    if (m.target.nodeType === 1 && m.target.closest(".btn__t")) return;
+    m.addedNodes.forEach((n) => { if (n.nodeType === 1) all(n); else if (n.nodeType === 3 && m.target.matches && m.target.matches(".btn")) wrap(m.target); });
+  })).observe(document.body, { childList: true, subtree: true });
+})();
