@@ -32,18 +32,19 @@ const PRODUCTS = [
 const byId = (id) => PRODUCTS.find((p) => p.id === id);
 
 /* ───── Built-in carpentry. `calc` is the piece it opens in the price calculator. ───── */
+// The pictures are M2D's own: a crew photo for wardrobes, and finished homes from the Portfolio for the rest.
 const BESPOKE = {
   wardrobe: { name: "Wardrobes", img: "assets/crew/08167c7e.jpg", calc: "wardrobe",
     desc: "Swing or sliding doors, drawers, lighting and internal fittings." },
-  kitchen: { name: "Kitchens", img: "assets/bespoke/kitchen.jpg", calc: "kitchen",
+  kitchen: { name: "Kitchens", img: "assets/portfolio/bedok/01.jpg", calc: "kitchen",
     desc: "Top and bottom cabinets, countertops, tall units and drawer stacks." },
-  feature: { name: "TV and feature walls", img: "assets/bespoke/feature.jpg", calc: "feature",
+  feature: { name: "TV and feature walls", img: "assets/portfolio/cantonment/02.jpg", calc: "feature",
     desc: "Consoles, fluted, slatted and mirror panels." },
-  study: { name: "Study and bay windows", calc: "study",
+  study: { name: "Study and bay windows", img: "assets/portfolio/chaseki/03.jpg", calc: "study",
     desc: "Desks, shelves and window seats with storage." },
-  shoe: { name: "Shoe and storage cabinets", img: "assets/bespoke/shoe.jpg", calc: "shoe",
+  shoe: { name: "Shoe and storage cabinets", img: "assets/portfolio/strathmore/04.jpg", calc: "shoe",
     desc: "Entryway cabinets and floor-to-ceiling bookshelves." },
-  doors: { name: "Doors", img: "assets/doors/flush.jpg",
+  doors: { name: "Doors", img: "assets/doors/flush-1.jpg",
     desc: "Flush and sliding doors, made to fit. We make the doors and their frames, built to the opening on site and finished to match your carpentry.",
     btn: "Ask about doors", href: wa("Hi M2D Carpentry, I'd like to ask about doors.") },
 };
@@ -917,11 +918,12 @@ addEventListener("pageshow", () => $$(".veil").forEach((v) => v.remove())); // c
 
 /* Home, the four divisions: the panels open one after another, left to right, when they scroll into view. */
 (function divisions() {
-  const grid = $("#svcGrid");
-  if (!grid || reduce || !("IntersectionObserver" in window)) return;
-  grid.classList.add("wait");
-  const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { grid.classList.add("in"); io.disconnect(); } }, { rootMargin: "0px 0px -14% 0px", threshold: 0.12 });
-  io.observe(grid);
+  if (reduce || !("IntersectionObserver" in window)) return;
+  $$(".svc-grid").forEach((grid) => { // Home's four divisions and the Carpentry page's four doors
+    grid.classList.add("wait");
+    const io = new IntersectionObserver((es) => { if (es[0].isIntersecting) { grid.classList.add("in"); io.disconnect(); } }, { rootMargin: "0px 0px -14% 0px", threshold: 0.12 });
+    io.observe(grid);
+  });
 })();
 
 /* ═════ Contact form ═════

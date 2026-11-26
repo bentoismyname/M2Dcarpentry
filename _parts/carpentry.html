@@ -7,12 +7,12 @@
       <p class="eyebrow">Bespoke carpentry</p>
       <h1>Built into<br>your home.</h1>
       <p class="lede">Drawn for your home and built by our own team: cabinetry, walls, storage and doors, made to your size and laminate.</p>
-      <a class="btn" href="carpentry.html#estimate">Estimate a price</a>
+      <a class="btn" href="carpentry.html#calc">Estimate a price</a>
     </div>
   </section>
 
   <!-- ───── Bespoke carpentry and doors ───── -->
-  <section class="block alt" id="bespoke">
+  <section class="block alt flush-end" id="bespoke">
     <div class="wrap">
       <div class="bgrid" id="bespokeGrid"></div>
 
@@ -23,38 +23,47 @@
         </div>
         <p class="lede">We make the doors too: solid core laminated doors and their frames, built to the opening on site and finished to match your carpentry.</p>
       </div>
-      <div class="dgrid">
-        <article class="ctile door"><div class="dimg" style="background-image:url(assets/doors/flush.jpg)"></div>
-          <h3>Flush doors, concealed frame</h3><p>A flat door face with the frame hidden, so the door sits in line with the wall and the joins almost disappear. For bedrooms, studies and storerooms you want to blend in.</p>
-          <a href="carpentry.html#quote" data-door="Flush door, concealed frame">Ask about flush doors</a></article>
-        <article class="ctile door"><div class="dimg" style="background-image:url(assets/doors/sliding.jpg)"></div>
-          <h3>Sliding doors</h3><p>Doors that run on a track instead of swinging out, to save floor space. Slim frames with mirror, glass or panel inserts.</p>
-          <a href="carpentry.html#quote" data-door="Sliding door">Ask about sliding doors</a></article>
-        <article class="ctile door plain">
-          <h3>Solid core laminated doors</h3><p>A solid core door is heavier and quieter than a hollow one, and it holds its shape. We laminate both faces in the finish you choose, so it matches your wardrobes and walls.</p>
-          <a href="carpentry.html#quote" data-door="Solid core laminated door">Ask about solid core doors</a></article>
-        <article class="ctile door plain">
-          <h3>Door frames</h3><p>We make the frames as well, so the door, frame and finish come from one workshop and fit together. Concealed or visible, built to your opening.</p>
-          <a href="carpentry.html#quote" data-door="Door frame">Ask about door frames</a></article>
-      </div>
     </div>
-  </section>
-
-  <!-- ───── Scroll to build ───── -->
-  <section class="build" id="estimate" aria-label="From an empty room to a finished kitchen">
-    <div class="build-stage">
-      <img src="assets/build/1-empty.jpg" alt="An empty room before the carpentry" data-b="0">
-      <img src="assets/build/2-mid.jpg" alt="Kitchen cabinet carcasses installed" data-b="1" loading="lazy">
-      <img src="assets/build/3-built.jpg" alt="The finished kitchen and dining room" data-b="2" loading="lazy">
-      <div class="build-panel">
-        <p class="eyebrow">Price estimate</p>
-        <h2>Scroll to build it.</h2>
-        <ol class="build-steps" id="buildSteps">
-          <li class="on"><b>01</b> Empty room</li>
-          <li><b>02</b> Cabinets go in</li>
-          <li><b>03</b> Finished</li>
-        </ol>
-      </div>
+    <!-- The four kinds of door, as tall photo panels like the "four divisions" on Home: pointing at one brings up its
+         second photo, a brown wash, the words and the "Ask about" link; on phones the words are always shown.
+         The photos are from the door maker's own Instagram (jack_minimalistdoor), without people. -->
+    <div class="svc-grid svc-grid--doors" id="doorGrid">
+      <a class="svc" href="carpentry.html#quote" data-door="Flush door, concealed frame" style="--c:var(--brown)">
+        <img class="svc__img" src="assets/doors/flush-1.jpg" alt="A flush door standing open in its concealed frame" loading="lazy" style="object-position:50% 50%">
+        <img class="svc__img svc__img--hover" src="assets/doors/flush-2.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><span>Doors<br>01</span></span>
+        <span class="svc__text">A flat door face with the frame hidden, so the door sits in line with the wall and the joins almost disappear. For bedrooms, studies and storerooms you want to blend in.</span>
+        <span class="svc__more">Ask about flush doors <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Flush doors</span><span>Concealed frame</span></span>
+      </a>
+      <a class="svc" href="carpentry.html#quote" data-door="Sliding door" style="--c:var(--brown)">
+        <img class="svc__img" src="assets/doors/sliding-1.jpg" alt="A sliding door with a slatted grille" loading="lazy" style="object-position:60% 0%">
+        <img class="svc__img svc__img--hover" src="assets/doors/sliding-2.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><span>Doors<br>02</span></span>
+        <span class="svc__text">Doors that run on a track instead of swinging out, to save floor space. Slim frames with mirror, glass or panel inserts.</span>
+        <span class="svc__more">Ask about sliding doors <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Sliding</span><span>Doors</span></span>
+      </a>
+      <a class="svc" href="carpentry.html#quote" data-door="Solid core laminated door" style="--c:var(--brown)">
+        <img class="svc__img" src="assets/doors/solid-1.jpg" alt="A door face with a slim lever handle" loading="lazy" style="object-position:50% 50%">
+        <img class="svc__img svc__img--hover" src="assets/doors/solid-2.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><span>Doors<br>03</span></span>
+        <span class="svc__text">A solid core door is heavier and quieter than a hollow one, and it holds its shape. We laminate both faces in the finish you choose, so it matches your wardrobes and walls.</span>
+        <span class="svc__more">Ask about solid core doors <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Solid core</span><span>Laminated doors</span></span>
+      </a>
+      <a class="svc" href="carpentry.html#quote" data-door="Door frame" style="--c:var(--brown)">
+        <img class="svc__img" src="assets/doors/frame-1.jpg" alt="A corridor with a door frame set flush into the wall" loading="lazy" style="object-position:30% 50%">
+        <img class="svc__img svc__img--hover" src="assets/doors/frame-2.jpg" alt="" loading="lazy">
+        <span class="svc__tint"></span>
+        <span class="svc__logo"><span>Doors<br>04</span></span>
+        <span class="svc__text">We make the frames as well, so the door, frame and finish come from one workshop and fit together. Concealed or visible, built to your opening.</span>
+        <span class="svc__more">Ask about door frames <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></span>
+        <span class="svc__name"><span>Door</span><span>Frames</span></span>
+      </a>
     </div>
   </section>
 
@@ -108,6 +117,8 @@
 {{quote}}
   <!-- ───── Tenders ───── -->
   <section class="tband" id="tenders">
+    <!-- the photo behind is one of M2D's own homes (Oak &amp; Ember) -->
+    <div class="tband-bg"><img src="assets/portfolio/cantonment/01.jpg" alt="" width="1500" height="1125" loading="lazy"></div>
     <div class="wrap tband-in">
       <div>
         <h2>Planning a bigger project?</h2>
