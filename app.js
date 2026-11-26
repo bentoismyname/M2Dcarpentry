@@ -682,7 +682,7 @@ try {
   const root = document.documentElement;
   if (!root.classList.contains("rv-pre")) return;
   try {
-    const SKIP = ".pgrid, .item, #calc, form, .crew, .ticker, .tour, .shop-hero, .tm, .rvw-cols, .intro-h, .process, .pfh, .rp, .arts, .qc, .svc-grid, .counts, .mag, [hidden]";
+    const SKIP = ".pgrid, .item, #calc, form, .crew, .ticker, .tour, .shop-hero, .tm, .rvw-cols, .intro-h, .process, .pfh, .rp, .arts, .qc, .svc-grid, .counts, .mag, .strip, [hidden]";
     const all = $$("main section.block").flatMap((sec) => [...sec.querySelectorAll(".eyebrow, h1, h2, h3, .lede, p, .btn, figure, li, dl > div, details, blockquote, .chips")])
       .filter((el) => !el.closest(SKIP));
     const set = new Set(all);
@@ -1065,4 +1065,46 @@ addEventListener("pageshow", () => $$(".veil").forEach((v) => v.remove())); // c
     if (m.target.nodeType === 1 && m.target.closest(".btn__t")) return;
     m.addedNodes.forEach((n) => { if (n.nodeType === 1) all(n); else if (n.nodeType === 3 && m.target.matches && m.target.matches(".btn")) wrap(m.target); });
   })).observe(document.body, { childList: true, subtree: true });
+})();
+
+/* Our story, "The people who build it": one long strip of crew photos. It drifts slowly by itself and loops without
+   a seam (the photos are written out twice); you can drag it, swipe it, or scroll sideways on a trackpad. */
+(function crewStrip() {
+  $$("[data-strip]").forEach((box) => {
+    const track = box.firstElementChild, orig = [...track.children];
+    if (!orig.length) return;
+    orig.forEach((n) => { const c = n.cloneNode(true); c.setAttribute("aria-hidden", "true"); const im = c.querySelector("img"); if (im) { im.alt = ""; im.loading = "lazy"; } track.appendChild(c); });
+    let period = 0, x = 0, vel = 0, drag = null, hover = false, seen = true, last = performance.now();
+    const measure = () => { period = track.children[orig.length].offsetLeft - track.children[0].offsetLeft; };
+    measure(); addEventListener("resize", measure); addEventListener("load", measure);
+    const speed = reduce ? 0 : 0.04; // px per millisecond
+    if ("IntersectionObserver" in window) new IntersectionObserver((es) => { seen = es[0].isIntersecting; }, { rootMargin: "120px" }).observe(box);
+    box.addEventListener("mouseenter", () => { hover = true; });
+    box.addEventListener("mouseleave", () => { hover = false; });
+    box.addEventListener("pointerdown", (e) => { drag = { x: e.clientX, y: e.clientY, start: x, lx: e.clientX, lt: performance.now(), axis: "" }; vel = 0; });
+    addEventListener("pointermove", (e) => {
+      if (!drag) return;
+      const dx = e.clientX - drag.x, dy = e.clientY - drag.y;
+      if (!drag.axis) { if (Math.abs(dx) < 6 && Math.abs(dy) < 6) return; drag.axis = Math.abs(dx) > Math.abs(dy) ? "x" : "y"; if (drag.axis === "x") box.classList.add("is-drag"); }
+      if (drag.axis !== "x") return;
+      const now = performance.now();
+      vel = (e.clientX - drag.lx) / Math.max(1, now - drag.lt); drag.lx = e.clientX; drag.lt = now;
+      x = drag.start + dx;
+    });
+    const end = () => { if (!drag) return; drag = null; box.classList.remove("is-drag"); };
+    addEventListener("pointerup", end); addEventListener("pointercancel", end);
+    box.addEventListener("wheel", (e) => { if (Math.abs(e.deltaX) <= Math.abs(e.deltaY)) return; e.preventDefault(); x -= e.deltaX; }, { passive: false });
+    box.addEventListener("dragstart", (e) => e.preventDefault());
+    const tick = (now) => {
+      const dt = Math.min(64, now - last); last = now;
+      if (!period) measure();
+      if (seen && period) {
+        if (!drag) { x += vel * dt; vel *= Math.pow(0.94, dt / 16); if (Math.abs(vel) < 0.01) { vel = 0; if (!hover) x -= speed * dt; } }
+        let shown = x % period; if (shown > 0) shown -= period; // the loop: always somewhere within one set of photos
+        track.style.transform = "translate3d(" + shown.toFixed(1) + "px,0,0)";
+      }
+      requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  });
 })();
