@@ -683,7 +683,7 @@ try {
   const root = document.documentElement;
   if (!root.classList.contains("rv-pre")) return;
   try {
-    const SKIP = ".pgrid, .item, #calc, form, .crew, .ticker, .tour, .shop-hero, .tm, .rvw-cols, .intro-h, .process, .pfh, .rp, .arts, .qc, .svc-grid, [hidden]";
+    const SKIP = ".pgrid, .item, #calc, form, .crew, .ticker, .tour, .shop-hero, .tm, .rvw-cols, .intro-h, .process, .pfh, .rp, .arts, .qc, .svc-grid, .counts, .mag, [hidden]";
     const all = $$("main section.block").flatMap((sec) => [...sec.querySelectorAll(".eyebrow, h1, h2, h3, .lede, p, .btn, figure, li, dl > div, details, blockquote, .chips")])
       .filter((el) => !el.closest(SKIP));
     const set = new Set(all);
@@ -1010,4 +1010,36 @@ addEventListener("pageshow", () => $$(".veil").forEach((v) => v.remove())); // c
     target += e.deltaY;
     if (!raf) raf = requestAnimationFrame(step);
   }, { passive: false });
+})();
+
+/* Home, the brown band: each number counts up from zero when it scrolls into view, one after another
+   (the timing of the counters on m2decor.com). The page already holds the finished numbers, so nothing is lost
+   where motion is turned off or the counting cannot run. */
+(function counters() {
+  const els = $$("[data-count]");
+  if (!els.length || reduce || !("IntersectionObserver" in window)) return;
+  const box = els[0].closest(".counts");
+  if (box) box.classList.add("wait");
+  els.forEach((el) => { el.textContent = "0"; });
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    io.unobserve(e.target);
+    if (box) box.classList.add("in");
+    const el = e.target, end = parseFloat(el.dataset.count), dur = 2200, t0 = performance.now() + els.indexOf(el) * 180;
+    const step = (t) => { const k = clamp((t - t0) / dur), v = Math.round(end * (1 - Math.pow(1 - k, 3))); el.textContent = v; if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+    setTimeout(() => { el.textContent = end; }, dur + 1400); // the finished number, even if the page was in the background
+  }), { threshold: 0.5 });
+  els.forEach((el) => io.observe(el));
+})();
+
+/* Our story: the big title and each row slide in from their own side, and play again each time they come back
+   into view (the same behaviour as the numbered rows on Home). */
+(function magStory() {
+  const els = $$(".mag [data-mag]");
+  if (!els.length || reduce || !("IntersectionObserver" in window)) return;
+  document.documentElement.classList.add("mag-on");
+  const show = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) e.target.classList.add("in"); }), { rootMargin: "0px 0px -10% 0px", threshold: 0.12 });
+  const hide = new IntersectionObserver((es) => es.forEach((e) => { if (!e.isIntersecting) e.target.classList.remove("in"); }), { threshold: 0 });
+  els.forEach((el) => { show.observe(el); hide.observe(el); });
 })();
