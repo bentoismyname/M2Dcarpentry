@@ -2251,3 +2251,31 @@ section.about-press{padding:clamp(48px,6vw,90px) 0 clamp(40px,5vw,72px)}
 /* ───── Opening screen: RENOVATION AND CARPENTRY in one straight, centred line under the M2D mark ───── */
 .pre-cap{white-space:nowrap;letter-spacing:.34em;padding-left:.34em;text-align:center}
 @media (max-width:820px){.pre-cap{font-size:10px;letter-spacing:.26em;padding-left:.26em}}
+
+/* ───── 16:9 heroes on phones: the Carpentry film and the Shop photo keep their own shape, words and button below ───── */
+@media (max-width:999px){
+  /* Carpentry: the build film */
+  .chero--video{display:block;min-height:0;height:auto;margin-top:64px;background:var(--paper);color:var(--ink)}
+  .chero--video .chero__bg{position:relative;inset:auto;aspect-ratio:16 / 9;overflow:hidden;background:#D9CDBB}
+  .chero--video .chero__bg img,.chero--video .chero__bg video{object-position:center}
+  .chero--video .chero__bg::after{display:none}
+  .chero--video .chero__in{padding-top:30px;padding-bottom:44px;gap:14px}
+  .chero--video .eyebrow{color:var(--muted)}
+  .chero--video h1{color:var(--ink);text-shadow:none;font-size:clamp(34px,8.6vw,56px)}
+  .chero--video .lede{color:var(--muted);text-shadow:none}
+  .chero--video .btn{margin-top:6px}
+
+  /* Shop: the photo, then the heading */
+  .shop-hero{padding-top:64px}
+  .sh-pic{display:flex;flex-direction:column;height:auto;aspect-ratio:auto;overflow:visible;border-radius:0;background:none}
+  .sh-plate{position:relative;inset:auto;top:auto;left:auto;width:100%;height:auto;aspect-ratio:1672 / 941;transform:none;overflow:hidden}
+  .sh-plate::after{display:none}
+  .sh-copy{position:static;max-width:none;padding:28px var(--gutter) 6px;color:var(--ink)}
+  .sh-copy h1{color:var(--ink);font-size:clamp(34px,8.6vw,56px)}
+  .sh-copy .eyebrow{color:var(--muted)}
+  body.page-shop main > section.shop{padding-top:28px}
+}
+@media (max-width:820px){
+  .chero--video{margin-top:60px}
+  .shop-hero{padding-top:60px}
+}
