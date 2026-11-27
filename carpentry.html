@@ -12,8 +12,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap">
-<link rel="stylesheet" href="calc.css?v=134">
-<link rel="stylesheet" href="style.css?v=134">
+<link rel="stylesheet" href="calc.css?v=139">
+<link rel="stylesheet" href="style.css?v=139">
 <script>(function(d){if(window.IntersectionObserver&&!matchMedia("(prefers-reduced-motion: reduce)").matches){d.classList.add("rv-pre");setTimeout(function(){d.classList.remove("rv-pre")},2500)}})(document.documentElement)</script>
 </head>
 <body class="page-carpentry">
@@ -56,7 +56,8 @@
        finished room (app.js, buildFilm). It does not loop. Where films cannot play, the finished room is shown as a picture.
        The room and the people in the film are generated pictures, not one of M2D's own projects. ───── -->
   <section class="chero chero--video" id="cph">
-    <div class="chero__bg"><img src="assets/carpentry-hero/start.jpg" alt="" width="1920" height="1080"></div>
+    <!-- on phones (up to 700px wide) a tall film and pictures made for phones are used instead (app.js, buildFilm) -->
+    <div class="chero__bg"><picture><source media="(max-width:700px)" srcset="assets/carpentry-hero/phone-start.jpg"><img src="assets/carpentry-hero/start.jpg" alt="" width="1920" height="1080"></picture></div>
     <div class="wrap chero__in">
       <p class="eyebrow">Bespoke carpentry</p>
       <h1>Built into<br>your home.</h1>
@@ -271,7 +272,7 @@
 </aside>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-<script src="app.js?v=134"></script>
-<script src="calc.js?v=134"></script>
+<script src="app.js?v=139"></script>
+<script src="calc.js?v=139"></script>
 </body>
 </html>

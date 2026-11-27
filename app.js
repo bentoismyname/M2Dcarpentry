@@ -120,6 +120,7 @@ let frames = [];
 if (tour) [TOUR.from, TOUR.to].forEach((src, i) => pic(src).then((im) => { stills[i] = im; draw(cur); }));
 async function loadFrames() {
   if (reduce) return; // no camera move: the two pictures fade into each other
+  if (film) return; // the film plays instead of scroll frames
   const man = await fetch(TOUR.dir + "manifest.json").then((r) => r.json()).catch(() => null);
   const n = man && man.n;
   if (!n) return;
@@ -144,6 +145,7 @@ function layout() {
   const s = Math.max(W / IW, H / IH);
   w = IW * s; h = IH * s; y0 = (H - h) / 2;
   plate.style.width = w + "px"; plate.style.height = h + "px"; plate.style.top = y0 + "px";
+  if (film && !film.dataset.tall) { film.style.width = w + "px"; film.style.height = h + "px"; film.style.top = y0 + "px"; }
   // The M2D name hangs on the bare wall, below the floating header bar.
   const phone = W <= 820;
   let lt = Math.max(phone ? 100 : 124, y0 + (phone ? 0.30 : 0.17) * h); // on a phone the first view is the kitchen corner: sit below the lamp cables
@@ -166,6 +168,7 @@ function paint(im, x, alpha) {
 function draw(p) {
   const x = clamp(W / 2 - focalAt(p) * w, W - w, 0);
   plate.style.transform = `translate3d(${x}px,0,0)`;
+  if (film && !film.dataset.tall) film.style.transform = plate.style.transform;
   ctx.globalAlpha = 1; ctx.clearRect(0, 0, canvas.width, canvas.height);
   const t = seg(p, TOUR.move), EDGE = 0.05; // the first and last moments blend with the approved pictures
   if (t <= 0) paint(stills[0], x, 1);
@@ -194,14 +197,15 @@ function draw(p) {
     heads.forEach((el, i) => el.classList.toggle("on", i === k));
   }
   topBar.classList.toggle("at-start", p < 0.08 && !topBar.classList.contains("solid"));
-  document.body.classList.toggle("at-top", p < 0.05); // the floating WhatsApp button waits until the walk has started
+  document.body.classList.toggle("at-top", film ? scrollY < 20 : p < 0.05); // the floating WhatsApp button waits until the walk has started
 }
 let cur = 0, want = 0, raf = 0, lastT = 0;
 function read() {
   if (!tour) { readBuild(); return; }
   const r = tour.getBoundingClientRect();
-  want = clamp(-r.top / (tour.offsetHeight - innerHeight));
   topBar.classList.toggle("solid", r.bottom < 80);
+  if (film) { document.body.classList.toggle("at-top", scrollY < 20); readBuild(); return; }
+  want = clamp(-r.top / (tour.offsetHeight - innerHeight));
   if (reduce) { cur = want; draw(cur); } else if (!raf) raf = requestAnimationFrame(tick);
   readBuild();
 }
@@ -226,9 +230,42 @@ function readBuild() {
   const step = p < 0.28 ? 0 : p < 0.72 ? 1 : 2;
   buildSteps.forEach((li, i) => li.classList.toggle("on", i === step));
 }
+/* ═════ homeFilm: the crew builds the room by itself, once, and it stays finished ═════ */
+const FILM_HEADS = [0.54, 0.77]; // share of the film when the second and the third header come in
+let film = null;
+if (tour && !reduce) {
+  const tall = matchMedia("(max-width:700px)").matches && null;
+  film = document.createElement("video");
+  film.className = "tour-film" + (tall ? " tall" : "");
+  if (tall) film.dataset.tall = "1";
+  film.muted = true; film.playsInline = true; film.preload = "auto"; film.loop = false;
+  film.setAttribute("muted", ""); film.setAttribute("playsinline", ""); film.setAttribute("aria-hidden", "true");
+  film.src = tall || (innerWidth * Math.min(2, devicePixelRatio || 1) >= 1100 ? "assets/home-film/build-1080.mp4" : "assets/home-film/build-720.mp4");
+  canvas.after(film);
+  TOUR.heads = FILM_HEADS;
+  tour.classList.add("tour--film");
+  const at = (t) => { cur = want = t >= 1 ? 1 : TOUR.move[0] + t * (TOUR.move[1] - TOUR.move[0]); draw(cur); };
+  let loop = 0;
+  const step = () => { if (film.duration) at(Math.min(0.999, film.currentTime / film.duration)); loop = requestAnimationFrame(step); };
+  const done = () => { cancelAnimationFrame(loop); at(1); };
+  film.addEventListener("playing", () => { cancelAnimationFrame(loop); loop = requestAnimationFrame(step); });
+  film.addEventListener("ended", done); // stays on its last frame, the finished room; the dots come up
+  const fail = () => { if (!film) return; film.remove(); film = null; tour.classList.remove("tour--film"); done(); };
+  film.addEventListener("error", fail);
+  const start = () => { if (!film) return; const pr = film.play(); if (pr && pr.catch) pr.catch(fail); };
+  const root = document.documentElement;
+  if (!root.classList.contains("pre-on")) start();
+  else { // the opening screen first: the build starts as the window onto the house becomes the page
+    const mo = new MutationObserver(() => { if (!root.classList.contains("pre-on")) { mo.disconnect(); start(); } });
+    mo.observe(root, { attributes: true, attributeFilter: ["class"] });
+    setTimeout(() => { mo.disconnect(); start(); }, 6000); // never wait longer than this
+  }
+}
+if (tour && reduce) { cur = want = 1; } // no motion: the finished room
+
 addEventListener("scroll", read, { passive: true });
 addEventListener("resize", () => { if (tour) layout(); read(); });
-if (tour) { layout(); read(); cur = want; draw(cur); loadFrames(); } else read();
+if (tour) { layout(); read(); if (!film && !reduce) cur = want; draw(cur); loadFrames(); } else read();
 
 /* ═════ Opening ═════
    1. The M2D name and "Carpentry" sit alone on cream.
@@ -401,10 +438,9 @@ addEventListener("hashchange", route);
 
 // Doors have their own block under the tiles, as on Ben's page.
 if ($("#bespokeGrid")) $("#bespokeGrid").innerHTML = Object.entries(BESPOKE).filter(([k]) => k !== "doors").map(([k, b]) => `
-  <button type="button" class="ctile btile${b.img ? "" : " plain"}" data-open="b:${k}"${b.img ? ` style="background-image:url(${b.img})"` : ""}>
-    <span class="notch"><span class="go">${ARROW}</span></span>
+  <div class="ctile btile btile--still${b.img ? "" : " plain"}"${b.img ? ` style="background-image:url(${b.img})"` : ""}>
     <strong>${b.name}</strong><span class="bdesc">${b.desc.split(". ")[0].replace(/\.$/, "")}.</span>
-  </button>`).join("");
+  </div>`).join(""); // pictures with words only: nothing to press
 
 $$("[data-arrow]").forEach((e) => { e.innerHTML = ARROW; });
 
@@ -965,12 +1001,18 @@ addEventListener("pageshow", () => $$(".veil").forEach((v) => v.remove())); // c
   const hero = $("#cph");
   if (!hero) return;
   const bg = hero.querySelector(".chero__bg"), still = bg.querySelector("img");
-  const finished = () => { still.src = asset("assets/carpentry-hero/end.jpg"); };
+  const phone = matchMedia("(max-width:700px)").matches; // phones get the tall film made for them
+  const finished = () => {
+    const src = phone ? "assets/carpentry-hero/phone-end.jpg" : "assets/carpentry-hero/end.jpg";
+    const pic = still.parentElement; if (pic && pic.tagName === "PICTURE") pic.querySelectorAll("source").forEach((s) => s.remove());
+    still.src = asset(src);
+  };
   if (reduce) { finished(); return; }
   const v = document.createElement("video");
   v.muted = true; v.playsInline = true; v.preload = "auto"; v.loop = false;
   v.setAttribute("muted", ""); v.setAttribute("playsinline", ""); v.setAttribute("aria-hidden", "true");
-  v.src = asset(innerWidth * Math.min(2, devicePixelRatio || 1) >= 1100 ? "assets/carpentry-hero/build-1080.mp4" : "assets/carpentry-hero/build-720.mp4");
+  v.src = asset(phone ? "assets/carpentry-hero/build-phone.mp4"
+    : innerWidth * Math.min(2, devicePixelRatio || 1) >= 1100 ? "assets/carpentry-hero/build-1080.mp4" : "assets/carpentry-hero/build-720.mp4");
   bg.appendChild(v);
   let gone = false;
   const back = () => { if (gone) return; gone = true; v.remove(); hero.classList.remove("playing"); finished(); };
@@ -1107,4 +1149,40 @@ addEventListener("pageshow", () => $$(".veil").forEach((v) => v.remove())); // c
     };
     requestAnimationFrame(tick);
   });
+})();
+
+/* Everything that had no entrance of its own: the pieces of each group arrive one after another, left to right,
+   coming down a little and fading in (the same as the shop cards). Each group starts when it scrolls into view. */
+(function queueIn() {
+  if (reduce || !("IntersectionObserver" in window)) return;
+  const GROUPS = [
+    "#bespokeGrid", "#price .qc-side", "#price .qc-view", "#crew .crew-head",
+    "#calc .sec-head", "#calc .est2 .step", "#calc .est2 > aside", "#quote .sec-head", "#quoteForm",
+    ".tband .tband-bg", ".tband .tband-in", "#history .mag__logo", "#process .proc-step, #process .pstep", "#contact .contact__info", "#contact .cform",
+    ".cl__text", ".foot-about", ".foot-top > nav", ".foot-top > div:not(.foot-about):not(.foot-divs)", ".foot-bot",
+  ];
+  const done = new Set();
+  const items = [];
+  GROUPS.forEach((sel) => $$(sel).forEach((box) => {
+    if (done.has(box)) return; done.add(box);
+    const kids = box.id === "bespokeGrid" || box.matches(".foot-bot, .foot-top > nav, .foot-top > div, .tband-in, .qc-side, .crew-head, .sec-head, .contact__info, .cl__text, .foot-about")
+      ? [...box.children].filter((k) => getComputedStyle(k).display !== "none") : [box];
+    kids.forEach((k) => { if (!k.classList.contains("q-item")) { k.classList.add("q-item"); items.push(k); } });
+  }));
+  if (!items.length) return;
+  document.documentElement.classList.add("q-on");
+  const io = new IntersectionObserver((es) => {
+    const now = es.filter((e) => e.isIntersecting).map((e) => e.target).sort((x, y) => {
+      const A = x.getBoundingClientRect(), B = y.getBoundingClientRect();
+      return (Math.round(A.top / 40) - Math.round(B.top / 40)) || (A.left - B.left); // row by row, left to right
+    });
+    now.forEach((el, i) => {
+      io.unobserve(el);
+      const d = Math.min(i, 9) * 110;
+      el.style.setProperty("--qd", d + "ms");
+      el.classList.add("q-in");
+      setTimeout(() => { el.classList.remove("q-item", "q-in"); el.style.removeProperty("--qd"); }, d + 1300);
+    });
+  }, { rootMargin: "0px 0px -6% 0px", threshold: 0.06 });
+  items.forEach((el) => io.observe(el));
 })();
