@@ -71,10 +71,10 @@ const HERO_SETS = {
        focal: [[0, 0.36], [0.84, 0.36], [0.97, 0.84], [1, 0.84]],
        steps: [[0.05, "Kitchen ready"], [0.24, "Rug down"], [0.56, "Sofa and cushions"], [0.97, "Tables and stools"]] },
 };
-let heroPick = "1";
+let heroPick = "3";
 try {
-  heroPick = new URLSearchParams(location.search).get("hero") || "1"; // 1 = the room builds itself, no people (the one in use)
-  if (!HERO_SETS[heroPick]) heroPick = "1";
+  heroPick = new URLSearchParams(location.search).get("hero") || "3"; // 3 = kitchen already built, the crew brings the furniture (the film in use)
+  if (!HERO_SETS[heroPick]) heroPick = "3";
 } catch (e) {}
 const TOUR = {
   move: [0.05, 0.80],
@@ -231,18 +231,20 @@ function readBuild() {
   buildSteps.forEach((li, i) => li.classList.toggle("on", i === step));
 }
 /* ═════ homeFilm: the crew builds the room by itself, once, and it stays finished ═════ */
-const FILM_HEADS = [0.54, 0.77]; // share of the film when the second and the third header come in
+const FILM_HEADS = [0.25, 0.86]; // share of the film when the second header (sofa comes in) and the third (bar stools) come in
+const FILM_HEADS_PHONE = [0.25, 0.7]; // the same, for the tall phone film
+const PHONE_START = "assets/home-film/phone-start.jpg"; // its first frame: the opening screen and the poster use it
 let film = null;
 if (tour && !reduce) {
-  const tall = matchMedia("(max-width:700px)").matches && null;
+  const tall = matchMedia("(max-width:700px)").matches && "assets/home-film/build-phone.mp4"; // phones: a tall film made for them
   film = document.createElement("video");
   film.className = "tour-film" + (tall ? " tall" : "");
-  if (tall) film.dataset.tall = "1";
+  if (tall) { film.dataset.tall = "1"; film.poster = PHONE_START; tour.classList.add("tour--tall"); }
   film.muted = true; film.playsInline = true; film.preload = "auto"; film.loop = false;
   film.setAttribute("muted", ""); film.setAttribute("playsinline", ""); film.setAttribute("aria-hidden", "true");
   film.src = tall || (innerWidth * Math.min(2, devicePixelRatio || 1) >= 1100 ? "assets/home-film/build-1080.mp4" : "assets/home-film/build-720.mp4");
   canvas.after(film);
-  TOUR.heads = FILM_HEADS;
+  TOUR.heads = tall ? FILM_HEADS_PHONE : FILM_HEADS;
   tour.classList.add("tour--film");
   const at = (t) => { cur = want = t >= 1 ? 1 : TOUR.move[0] + t * (TOUR.move[1] - TOUR.move[0]); draw(cur); };
   let loop = 0;
@@ -250,7 +252,7 @@ if (tour && !reduce) {
   const done = () => { cancelAnimationFrame(loop); at(1); };
   film.addEventListener("playing", () => { cancelAnimationFrame(loop); loop = requestAnimationFrame(step); });
   film.addEventListener("ended", done); // stays on its last frame, the finished room; the dots come up
-  const fail = () => { if (!film) return; film.remove(); film = null; tour.classList.remove("tour--film"); done(); };
+  const fail = () => { if (!film) return; film.remove(); film = null; tour.classList.remove("tour--film", "tour--tall"); done(); };
   film.addEventListener("error", fail);
   const start = () => { if (!film) return; const pr = film.play(); if (pr && pr.catch) pr.catch(fail); };
   const root = document.documentElement;
@@ -286,6 +288,7 @@ if (tour) { layout(); read(); if (!film && !reduce) cur = want; draw(cur); loadF
     win.style.height = S.height + "px";
     win.style.backgroundImage = `url(${TOUR.from})`;
     win.style.backgroundPosition = `${S.width - pw < -0.5 ? (px / (S.width - pw)) * 100 : 50}% 50%`;
+    if (film && film.dataset.tall) { win.style.backgroundImage = `url(${PHONE_START})`; win.style.backgroundPosition = "50% 50%"; } // phones open onto the tall film's first frame
     const K = phone ? 0.34 : 0.22, CUT = phone ? 31 : 12, R = 0; // small window: size, crop top and bottom, corner
     const half = (K * S.height * (1 - CUT / 50)) / 2;                            // half its height on screen
     const lh = plogo.offsetHeight, L = (logo || $(".top .brand img")).getBoundingClientRect(); // the name lands on the header logo

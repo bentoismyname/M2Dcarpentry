@@ -2308,3 +2308,5 @@ html.q-on .tband-bg.q-item{transform:none} /* the photo behind a call to action 
 .tour.tour--film{height:100vh;height:100svh}
 .tour-film{position:absolute;left:0;display:block;object-fit:cover;pointer-events:none;will-change:transform;background:var(--cream)}
 .tour-film.tall{inset:0;width:100%;height:100%;object-position:center}
+/* phones: the tall film fills the hero; the wide picture and its dots stay hidden under it */
+.tour--tall .tour-canvas,.tour--tall .plate{visibility:hidden}
